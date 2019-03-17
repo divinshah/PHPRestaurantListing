@@ -20,6 +20,7 @@
     }
     else{
         echo "inserted";
+        header("Location: /listingdisplay.php");        
     }
 
 

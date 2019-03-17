@@ -1,8 +1,80 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <style type = "text/css">
+        body {
+            font-family:Arial, Helvetica, sans-serif;
+            font-size:14px;
+        }
+        .navbar-custom{
+        background-color: #123977;
+        }
+        .navbar a{
+        color: white !important;
+        font-size: 1.2em !important;
+        }
+        .navbar li{
+        padding-right: 5px;
+        }
+        label {
+        font-weight:bold;
+        width:100px;
+        font-size:14px;
+        }
+        .box {
+        border:#ffffff solid 1px;
+        }
+        .containerH{
+            padding-top: 50px;
+        }
+        
+      </style>
 <body>
 
+<!-------- Header --------->
+<nav class="navbar navbar-expand-sm navbar-dark fixed-top navbar-custom">
+  <a class="navbar-brand" href="#">TO</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Explore</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Blogs</a>
+      </li>  
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contact</a>
+      </li> 
+      <li class="nav-item">
+        <a class="nav-link" href="listingform.html"><button type="button" class="btn btn-outline-light">+Add Listing</button></a>
+      </li> 
+    </ul>
+  </div>  
+</nav>
+<div class="jumbotron">
+<div class="containerH">
+  <h1>Businesses</h1> 
+    </div>
+</div>
+<div class="container">
 <h2>Business List </h2>
+<a href="listingform.hmtl">Add listing</a>
 
 
 
@@ -26,10 +98,12 @@
 
         while ($row = mysqli_fetch_array($records))
         {
+            
             echo "<tr>";
             echo "<h2>". ucfirst($row['LISTING_NAME']) ."</h2>";
             echo "<p><strong>". ucfirst($row['LISTING_CATEGORY']) ."</strong></p>";
             echo "<p>". ucfirst($row['LISTING_CITY']) ."</td>";
+            
         }
     
 
@@ -37,6 +111,7 @@
 
 
 ?>
+</div>
 
 </body>
 </html>

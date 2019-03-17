@@ -3,6 +3,7 @@
 <body>
 
 <h2>Delete Business </h2>
+<p><a href="logout.php">Click here</a> to Logout.</p>
 <table border=1 cellpadding=1 cellspacing=1>
     <tr>
         <th>Business title</th>
