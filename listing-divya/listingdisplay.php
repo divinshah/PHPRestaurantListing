@@ -20,19 +20,22 @@
         color: white !important;
         font-size: 1.2em !important;
         }
+        .nav-item{
+
+        }
         .navbar li{
         padding-right: 5px;
-        }
-        label {
-        font-weight:bold;
-        width:100px;
-        font-size:14px;
         }
         .box {
         border:#ffffff solid 1px;
         }
         .containerH{
             padding-top: 50px;
+        }
+        .footer{
+        background-image: url("images/footer1.jpg");
+        padding: 30px 0px 30px 0px;
+        margin-top: 40px;
         }
         
       </style>
@@ -45,7 +48,7 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
-    <ul class="navbar-nav ml-auto">
+    <ul class="navbar-nav ml-auto align-items-center">
       <li class="nav-item">
         <a class="nav-link" href="#">Home</a>
       </li>
@@ -74,7 +77,7 @@
 </div>
 <div class="container">
 <h2>Business List </h2>
-<a href="listingform.hmtl">Add listing</a>
+<a href="listingform.html">Add listing</a>
 
 
 
@@ -111,6 +114,19 @@
 
 
 ?>
+</div>
+ <!--    Footer   -->
+<div class="footer text-center text-white" style="margin-bottom:0">
+  <h1 class="display-1 text-center">TO</h1>
+  <p>Toronto's very own</p>
+  <div class="row">
+    <div class="col-sm-4" ></div>
+    <div class="col-sm-4" ></div>
+    <div class="col-sm-4"><a href="https://www.facebook.com/"><img src="images/facebook-logo.png" height="40px" alt="facebook"></a>&nbsp &nbsp<a href="https://www.instagram.com/"><img src="images/instagram-logo.png" class="float" height="40px" alt="instagram"></a></div>
+      
+    </div>
+  </div>
+</div>
 </div>
 
 </body>
