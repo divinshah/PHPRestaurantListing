@@ -5,6 +5,21 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
 <div class="card-body mx-auto">
+    <div class="container">
+        <form action="" method="post">
+        <div class="form-group">
+            <label> Name :</label>
+            <input name="fname" class="form-control" placeholder="Enter Name" type="text">
+        </div>
+        <!--<div class="form-group">
+            <label> Email :</label>
+            <input name="email" class="form-control" placeholder="Enter Email" type="text">
+        </div>-->
+        <div class="form-group">
+            <button type="submit" name="search" class="btn btn-primary">Search</button>
+        </div>
+        </form>
+    </div>
     <table class="table">
         <thead class="thead-dark">
             <tr>
@@ -22,7 +37,25 @@
             require_once 'User.php';
             $db = Database :: getDB();
             $u = new User();
-            $myuser = $u -> getAllUser(Database :: getDB());
+            
+            //$myuser = $u -> getAllUser($db);
+            
+            if(isset($_POST['search']))
+            { 
+                $name = $_POST['fname'];
+                //$email = $_POST['email'];
+                //if($name != null)
+                //{
+                  //  $myuser = $u -> searchUser($name,$email, $db); 
+                    $myuser = $u -> searchUser($name, $db); 
+                //}
+                //else if($email != null)
+                                    
+            }
+            else 
+            {
+              $myuser = $u -> getAllUser($db);  
+            }
             
             foreach($myuser as $user)
             {

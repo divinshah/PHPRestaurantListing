@@ -90,5 +90,19 @@ class User
         echo $count;
         return $count;
     }
+    //Search By Name
+    public function searchUser($name,$db)
+    {
+        $sql = 'select * from registration where full_name like :name and is_visible = 1';
+        
+        $pst = $db ->prepare($sql);
+
+        //exceuting
+        $pst->bindParam(':name',$name);
+        $pst->execute();
+        $students = $pst->fetchAll(PDO::FETCH_OBJ);
+        return $students;
+
+    }
 }
 ?>
