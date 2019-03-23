@@ -60,29 +60,28 @@ CREATE TABLE `blog` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `business`
+-- Table structure for table `businesses`
 --
 
-CREATE TABLE `business` (
-  `ID` int(11) NOT NULL,
-  `LISTING_NAME` varchar(20) NOT NULL,
-  `LISTING_CATEGORY` varchar(20) NOT NULL,
-  `LISTING_CITY` varchar(20) NOT NULL,
-  `LISTING_CONTACT` varchar(50) DEFAULT NULL,
-  `LISTING_EMAIL` varchar(50) NOT NULL,
-  `Published` tinyint(1) NOT NULL,
-  `Listing_featured` tinyint(1) NOT NULL
+CREATE TABLE `businesses` (
+  `id` int(11) NOT NULL,
+  `listing_name` varchar(20) NOT NULL,
+  `listing_category` varchar(20) NOT NULL,
+  `listing_city` varchar(20) NOT NULL,
+  `listing_contact` varchar(50) DEFAULT NULL,
+  `listing_email` varchar(50) NOT NULL,
+  `published` tinyint(1) NOT NULL,
+  `listing_featured` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `business`
+-- Dumping data for table `businesses`
 --
 
-INSERT INTO `business` (`ID`, `LISTING_NAME`, `LISTING_CATEGORY`, `LISTING_CITY`, `LISTING_CONTACT`, `LISTING_EMAIL`, `Published`, `Listing_featured`) VALUES
-(1, 'Divya shah', 'designing studio', 'Toronto', '', '0', 0, 0),
-(2, 'Kemcho', 'restaurant', 'waterloo', '', '0', 0, 0),
-(4, 'bansal', 'Indian restaurant', 'toronto', '', '0', 0, 0),
-(5, 'wok of asia', 'Chinese restaurant', 'Etobicoke', '', '0', 0, 0);
+INSERT INTO `businesses` (`ID`, `listing_name`, `listing_category`, `listing_city`, `listing_contact`, `listing_email`, `published`, `listing_featured`) VALUES
+(1, 'honest', 'brampton', 'restaurant', '9724330544', 'div@gmail.com', 0, 0),
+(2, 'Rajdhani', 'Etobicoke', 'restaurant ', '99982224312', 'ji@th.com', 0, 0),
+(3, 'Kismat', 'Toronot', 'restaurant', '9998761232', 'kis@ks.com', 0, 0);
 
 -- --------------------------------------------------------
 

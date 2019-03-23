@@ -24,7 +24,7 @@
     }
 
     //query
-    $sql = "select * from business";
+    $sql = "select * from businesses";
 
     //execute the query
     $records= mysqli_query($con,$sql);
@@ -32,9 +32,11 @@
     while($row= mysqli_fetch_array($records))
     {
         echo "<tr>";
-        echo "<td>".$row['LISTING_NAME']."</td>";
-        echo "<td>".$row['LISTING_CITY']."</td>";
-        echo "<td>".$row['LISTING_CATEGORY']."</td>";
+        echo "<td>".$row['listing_name']."</td>";
+        echo "<td>".$row['listing_city']."</td>";
+        echo "<td>".$row['listing_category']."</td>";
+        echo "<td>".$row['listing_contact']."</td>";
+        echo "<td>".$row['listing_email']."</td>";
         echo "<td><a href= delete.php?id=" .$row['ID'].">Delete</a></td>";
     }
     

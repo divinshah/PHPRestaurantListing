@@ -10,7 +10,7 @@
     }
 
     //query
-    $sql = "delete from business where id='$_GET[id]'";
+    $sql = "delete from businesses where id='$_GET[id]'";
 
     //execute the query
     if(mysqli_query($con,$sql))
