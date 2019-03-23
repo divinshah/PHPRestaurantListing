@@ -10,7 +10,7 @@
     }
 
     //update query
-    $sql = "update business set LISTING_NAME='$_POST[listingname]', LISTING_CITY='$_POST[listingcity]', LISTING_CATEGORY='$_POST[listingcategory]' where id='$_POST[id]'";
+    $sql = "update businesses set listing_name='$_POST[listingname]', listing_city='$_POST[listingcity]', listing_category='$_POST[listingcategory]', listing_contact='$_POST[listingcontact]', listing_email='$_POST[listingemail]' where id='$_POST[id]'";
 
     //execute the query
     if(mysqli_query($con,$sql))

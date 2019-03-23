@@ -12,8 +12,10 @@
     $Title = $_POST['listingname'];
     $City = $_POST['listingcity'];
     $Category = $_POST['listingcategory'];
+    $Contact = $_POST['listingcontact'];
+    $Email = $_POST['listingemail'];
 
-    $sql = "insert into business (LISTING_NAME,LISTING_CATEGORY,LISTING_CITY) values ('$Title', '$City', '$Category')";
+    $sql = "insert into businesses (listing_name, listing_category, listing_city, listing_contact, listing_email) values ('$Title', '$City', '$Category', '$Contact', '$Email')";
 
     if(!mysqli_query($con, $sql)){
         echo "Not inserted";
