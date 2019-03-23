@@ -5,8 +5,12 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
 <?php
+require_once 'user_header.php';
 require_once 'Database.php';
 require_once 'User.php';
+
+//session_start();
+//echo $_SESSION['email'];
 
 if(isset($_GET['id']))
 {

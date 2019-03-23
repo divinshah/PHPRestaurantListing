@@ -21,8 +21,7 @@ if(isset($_POST['regiuser']))
     $cpwd = $_POST['cpwd'];
     $mobile = $_POST['mobile'];
     $addr = $_POST['addr'];
-    $pcode = $_POST['pcode'];
-    
+    $pcode = $_POST['pcode'];    
     $myuser = $u -> addUser($fname,$email,$pwd,$cpwd,$mobile,$addr,$pcode);
 }
 

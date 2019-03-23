@@ -1,8 +1,6 @@
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<?php
+require_once 'user_header.php';
+?>
 
 <?php
 require_once 'Database.php';
@@ -15,27 +13,8 @@ if(isset($_GET['id']))
     
     $u = new User();
     $user = $u->getUserById($id,$dbcon);
+    $_SESSION['email'];
 }
-if(isset($_POST['backtolist']))
-{
-    $id = $_POST['id'];
-    $fname = $_POST['fname'];
-    $email = $_POST['email'];
-    $pwd = $_POST['pwd'];
-    $cpwd = $_POST['cpwd'];
-    $mobile = $_POST['mobile'];
-    $addr = $_POST['addr'];
-    $pcode = $_POST['pcode'];
-    
-    $count = $u -> updateUser($id,$fname,$email,$mobile,$addr,$pcode,$dbcon);
-
-    if($count) {
-      header("Location: list-user.php");
-    } else {
-      echo "problem updating";
-    }
-}
-
 ?>
 <div class="jumbotron">
     <div class="container">
@@ -68,10 +47,6 @@ if(isset($_POST['backtolist']))
                 <label>Postal Code:</label>
                 <input name="pcode" class="form-control" placeholder="Postal Code" value="<?= $user->postal_code; ?>" type="text" />
             </div>
-            <div class="form-group">
-                <button type="submit" name="backtolist" class="btn btn-primary"> Back to List </button>
-            </div>
-            
         </form>
     
 </div>

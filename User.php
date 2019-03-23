@@ -104,5 +104,57 @@ class User
         return $students;
 
     }
+    //Check Old Password
+    public function checkPwd($oldpwd,$id,$db)
+    {
+        $sql = 'select * from registration where password = :oldpwd and id = :id and is_visible = 1';
+        
+        $pst = $db -> prepare($sql);
+        $pst->bindParam(':oldpwd',$oldpwd);
+        $pst->bindParam(':id',$id);
+        $pst->execute();
+        $students = $pst->fetchAll(PDO::FETCH_OBJ);
+        return $students;
+    }
+    //Check Login Credentials
+    public function checkLoginCredentails($email,$pwd, $db)
+    {
+        $sql = 'select * from registration where email_id = :email and password = :pwd and is_visible = 1';
+        
+        $pst = $db -> prepare($sql);
+        $pst->bindParam(':email',$email);
+        $pst->bindParam(':pwd',$pwd);
+        $pst->execute();
+        $students = $pst->fetchAll(PDO::FETCH_OBJ);
+        return $students;
+        
+        
+    }
+    // Get Id by email from tghe session value
+    public function getUseridByEmail($email,$db)
+        
+    {
+        $sql = 'select * from registration where email_id = :email and is_visible = 1';
+        
+        $pst = $db -> prepare($sql);
+        $pst->bindParam(':email',$email);
+        $pst->execute();
+        $students = $pst->fetchAll(PDO::FETCH_OBJ);
+        return $students;
+        
+    }
+    //
+    public function updatePwd($newpwd,$id,$db)
+    {
+        $sql = 'update registration set
+        password = :newpwd
+        where id =:id';
+        
+        $pst = $db -> prepare($sql);
+        $pst->bindParam(':newpwd',$newpwd);
+        $pst->bindParam(':id',$id);
+        $count = $pst->execute();
+        return $count;
+    }
 }
 ?>
