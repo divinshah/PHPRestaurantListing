@@ -52,7 +52,7 @@ if(isset($_POST['login']))
         </div>
         <div class="form-group">
             <label>Password:</label>
-            <input name="pwd" class="form-control" placeholder="Enter Password" type="text">
+            <input name="pwd" class="form-control" placeholder="Enter Password" type="password">
         </div>
         <div class="form-group">
             <button type="submit" name="login" class="btn btn-primary">Login</button>
