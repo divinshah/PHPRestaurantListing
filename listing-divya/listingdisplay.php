@@ -23,23 +23,18 @@ include "header.php";
         }
 
         //query
-        $sql = "select * from businesses";
+        $sql = "select * from business";
 
         //execute the query
         $records= mysqli_query($con,$sql);
 
         while ($row = mysqli_fetch_array($records))
-        { 
-          echo "<div class='row'>";
-          echo "<div class='col-sm-6'>";
-          echo "<tr>";
-          echo "<h2>". ucfirst($row['listing_name']) ."</h2>";
-          echo "<p><strong>". ucfirst($row['listing_category']) ."</strong></p>";
-          echo "<p>City:". ucfirst($row['listing_city']) ."</td>";
-          echo "<p>Contact:". ucfirst($row['listing_contact']) ."</td>";
-          echo "<p>Email:". ucfirst($row['listing_email']) ."</td></div></div>";
-          
-
+        {
+            
+            echo "<tr>";
+            echo "<h2>". ucfirst($row['LISTING_NAME']) ."</h2>";
+            echo "<p><strong>". ucfirst($row['LISTING_CATEGORY']) ."</strong></p>";
+            echo "<p>". ucfirst($row['LISTING_CITY']) ."</td>";
             
         }
     

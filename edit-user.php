@@ -74,9 +74,12 @@ if(isset($_POST['Edit']))
                 <input name="pcode" class="form-control" placeholder="Postal Code" value="<?= $user->postal_code; ?>" type="text" />
             </div>
             <div class="form-group">
-                <button type="submit" name="Edit" class="btn btn-primary"> Edit </button>
+                <button type="submit" name="Edit" class="btn btn-primary"> Update </button>
             </div>
             
         </form>
 </div>
 
+<?php
+require_once 'user_footer.php';
+?>

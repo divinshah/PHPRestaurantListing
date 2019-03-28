@@ -28,6 +28,38 @@
         background-image: url("images/footer1.jpg");
     }*/
   </style>
+    <style type = "text/css">
+        body {
+            font-family:Arial, Helvetica, sans-serif;
+            font-size:14px;
+        }
+        .navbar-custom{
+        background-color: #123977;
+        }
+        .navbar a{
+        color: white !important;
+        font-size: 1.2em !important;
+        }
+        .nav-item{
+
+        }
+        .navbar li{
+        padding-right: 5px;
+        }
+        .box {
+        border:#ffffff solid 1px;
+        }
+        .containerH{
+            padding-top: 50px;
+        }
+        .footer{
+        background-image: url("images/footer1.jpg");
+        padding: 30px 0px 30px 0px;
+        margin-top: 40px;
+        }
+        
+      </style>
+
 </head>
 <body>
 
@@ -70,9 +102,6 @@
         <a class="nav-link" href="user-detail.php?id=<?= $id; ?>">Profile</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" name="edit" href="edit-user.php?id=<?= $id; ?>">Edit Profile</a>
-      </li>
-      <li class="nav-item">
         <a class="nav-link" href="#">Feedback</a>
       </li>
       <li class="nav-item">
@@ -80,7 +109,10 @@
       </li>  
       <li class="nav-item">
         <a class="nav-link" href="#"><button type="button" class="btn btn-outline-light">My Business</button></a>
-      </li> 
+      </li>
+      <li class="nav-item">         
+        <a class="nav-link" href="Logout.php?id=<?= $id; ?>">Logout</a>
+      </li>
     </ul>
   </div>  
 </nav>
