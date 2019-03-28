@@ -54,18 +54,22 @@ if(isset($_POST['savepwd']))
     <form action="" method="post">
         <div class="form-group">
             <label>Old Password:</label>
-            <input name="oldpwd" class="form-control" placeholder="Enter your old Password" type="text">
+            <input name="oldpwd" class="form-control" placeholder="Enter your old Password" type="password">
         </div>
         <div class="form-group">
             <label>New Password:</label>
-            <input name="newpwd" class="form-control" placeholder="Enter new Password you want to create" type="text">
+            <input name="newpwd" class="form-control" placeholder="Enter new Password you want to create" type="password">
         </div>
         <div class="form-group">
             <label>Confirm Password:</label>
-            <input name="pwd" class="form-control" placeholder="Re-type your new Password" type="text">
+            <input name="pwd" class="form-control" placeholder="Re-type your new Password" type="password">
         </div>
         <div class="form-group">
             <button type="submit" name="savepwd" class="btn btn-primary">Save Password</button>
         </div>
     </form>
 </div>
+
+<?php
+require_once 'user_footer.php';
+?>

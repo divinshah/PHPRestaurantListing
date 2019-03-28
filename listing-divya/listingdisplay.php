@@ -77,7 +77,9 @@
 </div>
 <div class="container">
 <h2>Business List </h2>
-<a href="listingform.html">Add listing</a>
+<button type="button" class="btn btn-outline-success"><a href="listingform.html">Add listing</a></button>
+<button type="button" class="btn btn-outline-primary"><a href="updatelisting.php">Update listing</a></button>
+
 
 
 
