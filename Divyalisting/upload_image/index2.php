@@ -35,10 +35,7 @@
 </head>
 <body>
     <h2>Upload Image</h2>
-<?php
-    $db
 
-?>
 <div id="content">		
 <form method="POST" action="index2.php" enctype="multipart/form-data">
   	<input type="hidden" name="size" value="1000000">
@@ -48,10 +45,10 @@
   	<div>
       <textarea 
       	id="text" 
-      	cols="40" 
-      	rows="4" 
+      	cols="30" 
+      	rows="1" 
       	name="text" 
-      	placeholder="Say something about this image..."></textarea>
+      	placeholder="Title"></textarea>
   	</div>
   	<div>
   		<button type="submit" name="upload">POST</button>
@@ -60,4 +57,3 @@
 </div>
 </body>
 </html>
-
