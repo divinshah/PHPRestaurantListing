@@ -9,7 +9,7 @@ if(isset($_GET['id'])){
 
     $e = new Event();
     $event = $e ->getEventsById($id, $dbcon);
-
+	var_dump($event);
 }
 
 echo  "name : " . $event->eventName . "<br />";
@@ -18,3 +18,5 @@ echo  "location : " . $event->eventLocation . "<br />";
 echo  "eventdate : " . $event->eventdate . "<br />";
 echo  "eventtime : " . $event->eventTime . "<br />";
 echo  "fee : " . $event->eventFee . "<br />";
+
+?>

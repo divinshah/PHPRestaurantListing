@@ -1,4 +1,5 @@
 <?php
+include 'header.php';
 require_once './model/Database.php';
 require_once './model/event.php';
 
@@ -25,6 +26,11 @@ require_once './model/event.php';
 
     }
 ?>
+<div class="jumbotron">
+    <div class="container">
+      <h1>Add Events</h1> 
+        </div>
+    </div>
 
 <form action="" method="post">
 
@@ -38,13 +44,17 @@ require_once './model/event.php';
 	<input type="text" name="location" /> <br/>
 	
 	<label>Date: </label>
-	<input type="text" name="date" value="yyyy-mm-dd" /><br/>
+	<input type="text" name="date"  /><br/>
 	
 	<label>Time: </label>
-	<input type="text" name="time" value="hh:mm:ss"/><br/>
+	<input type="text" name="time" /><br/>
 	
 	<label>Fees: </label>
 	<input type="text" name="fee"/><br/>
 	
 	<input type="submit" name="addevent" value="Add Event" />
 </form>
+
+<?php
+	include 'footer.php';
+?>

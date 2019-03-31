@@ -9,6 +9,6 @@ if(isset($_POST['delete'])){
     $count = $e->deleteEvent($id, $dbcon);
 
     if($count){
-        header("Location: listevents.php");
+        header("Location: listevent.php");
     }
 }

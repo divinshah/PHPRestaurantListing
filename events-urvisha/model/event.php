@@ -62,7 +62,7 @@ class Event
     //List of all user by id to get detail
     public function getEventsById($id,$db)
     {
-        $sql = "select * from events where id=:id";
+        $sql = "select * from events where eventId = :id ";
         $pst = $db->prepare($sql);
 
         $pst->bindParam(':id', $id);
@@ -82,7 +82,7 @@ class Event
 		eventdate = :date,
 		eventTime = :time,
 		eventFee = :fee
-		where id =:id";
+		where eventId =:id";
         
         $pst =$db->prepare($sql);
         
@@ -95,7 +95,7 @@ class Event
 			$pst->bindParam(':fee',$fee);
             
         
-        echo "Event Edited Successfully";
+       
         $count = $pst->execute();
         return $count;      
     }
@@ -103,7 +103,7 @@ class Event
 
     public function deleteEvent($id,$db)
     {
-        $sql ="delete from events where id =:id";
+        $sql ="delete from events where eventId =:id";
         $pst = $db->prepare($sql);
         
         $pst->bindParam(':id',$id);
