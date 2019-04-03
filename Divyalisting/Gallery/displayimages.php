@@ -31,8 +31,11 @@
     }
     
 ?>
+
 </div>
+<a class="btn btn-primary" href="addnew.php"> Add new </a>
 </div>
+
 <?php include "footer.php"; ?>
 
 </div>

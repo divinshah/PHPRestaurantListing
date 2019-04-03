@@ -19,6 +19,7 @@ $statement1->closeCursor();
 <div class="page-header">
 <h1>Gallery list</h1>
 <a class="btn btn-primary" href="addnew.php"> Add new </a>
+<a class="btn btn-success" href="displayimages.php"> Gallery </a>
 </div>
 <br/>
 <div class="row">  
