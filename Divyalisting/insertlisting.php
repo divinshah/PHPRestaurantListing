@@ -15,14 +15,14 @@
     $Contact = $_POST['listingcontact'];
     $Email = $_POST['listingemail'];
 
-    $sql = "insert into businesses (listing_name, listing_category, listing_city, listing_contact, listing_email) values ('$Title', '$City', '$Category', '$Contact', '$Email')";
+    $sql = "insert into businesses (listing_name, listing_category, listing_city, listing_contact, listing_email) values ('$Title', '$Category', '$City', '$Contact', '$Email')";
 
     if(!mysqli_query($con, $sql)){
         echo "Not inserted";
     }
     else{
         echo "inserted";
-        header("Location: /listing/listingdisplay.php");        
+        header("Location: listingdisplay.php");        
     }
 
 

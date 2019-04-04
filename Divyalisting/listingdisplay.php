@@ -1,12 +1,18 @@
 <?php
 include "header.php";
+
 ?>
+<div class="jumbotron">
+    <div class="containerH">
+      <h1>businesses</h1> 
+        </div>
+    </div>
 
 <html>
 <body>
 <div class="container">
-<h2>Business List </h2>
-<a href="listingform.html">Add listing</a>
+
+  <div class="row">
 
 
 
@@ -30,14 +36,14 @@ include "header.php";
 
         while ($row = mysqli_fetch_array($records))
         { 
-          echo "<div class='row'>";
-          echo "<div class='col-sm-6'>";
-          echo "<tr>";
-          echo "<h2><a href='listingpage.php?id=" .$row['ID'] . "'>". ucfirst($row['listing_name']) ."</a></h2>";
+          
+          echo "<div class='col-md-4 col-xs-6'>";
+          
+          echo "<h2><a href='listingpage.php?id=" .$row['ID'] . "'>". ucfirst($row['listing_name']) ."</a></h2><div>";
           echo "<p><strong>". ucfirst($row['listing_category']) ."</strong></p>";
-          echo "<p>City:". ucfirst($row['listing_city']) ."</td>";
-          echo "<p>Contact:". ucfirst($row['listing_contact']) ."</td>";
-          echo "<p>Email:". ucfirst($row['listing_email']) ."</td></div></div>";
+          echo "<p>City:". ucfirst($row['listing_city']) ."</p>";
+          echo "<p>Contact:". ucfirst($row['listing_contact']) ."</p>";
+          echo "<p>Email:". ucfirst($row['listing_email']) ."</p></div></div>";
           
 
             
@@ -49,6 +55,9 @@ include "header.php";
 
 ?>
 </div>
+<button type="button" class="btn btn-outline-primary"><a href="listingform.html">Add listing</a></button>
+</div>
+
 </body>
 </html>
  <!--    Footer   -->

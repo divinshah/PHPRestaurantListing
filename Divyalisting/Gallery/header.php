@@ -45,11 +45,7 @@
     </ul>
   </div>  
 </nav>
-<div class="jumbotron">
-<div class="containerH">
-  <h1>Businesses</h1> 
-    </div>
-</div>
+
 
 
 
