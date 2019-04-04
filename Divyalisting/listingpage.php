@@ -1,4 +1,5 @@
 <?php
+include "header.php";
 $con = mysqli_connect('127.0.0.1','root','');
 //connect server
 if(!$con){
@@ -24,5 +25,5 @@ while ($row = mysqli_fetch_array($records))
 
         }
 
-
+    include "footer.php";
 ?>

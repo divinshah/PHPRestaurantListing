@@ -9,7 +9,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
     
-    <link rel="stylesheet" type="text/css" href="css/HFstyle.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
         
       
 <body>
@@ -34,6 +34,9 @@
         <a class="nav-link" href="#">Blogs</a>
       </li>  
       <li class="nav-item">
+        <a class="nav-link" href="#">Gallery</a>
+      </li> 
+      <li class="nav-item">
         <a class="nav-link" href="#">Contact</a>
       </li> 
       <li class="nav-item">
@@ -42,7 +45,11 @@
     </ul>
   </div>  
 </nav>
-
+<div class="jumbotron">
+<div class="containerH">
+  <h1>Businesses</h1> 
+    </div>
+</div>
 
 
 
@@ -52,6 +59,6 @@
 
 
 
-
+</div>
 </body>
 </html>
