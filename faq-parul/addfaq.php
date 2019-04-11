@@ -16,7 +16,7 @@ require_once 'faq.php';
 
 if(isset($_POST['AddQuestion']))	
 {
-		$question = $_POST['question'];
+	$question = $_POST['question'];
 	$answer= $_POST['answer'];
 
 	$count = $s->addfaq($question, $answer, $db);
