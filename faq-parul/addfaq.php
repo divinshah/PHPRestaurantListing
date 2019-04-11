@@ -33,10 +33,11 @@ if(isset($_POST['AddQuestion']))
 <form action="" method="post">
 <div class="form-group">
 	<label>Question:</label>
-	<input type="text" class="form-control" name="question" /> <br /></div>
+	<input type="text" class="form-control" name="question" required />
+	<br /></div>
 	<div class="form-group">
 	<label>Answer:</label>
-	<textarea name="answer" class="form-control" rows="10" cols="50" ></textarea> <br />
+	<textarea name="answer" class="form-control" rows="10" cols="50" required ></textarea> <br />
 	</div>
 	<div class="form-group">
 	<input type="submit" class="form-control" name="AddQuestion" value="Add" /></div>

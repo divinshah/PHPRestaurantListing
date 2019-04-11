@@ -21,7 +21,7 @@ if(isset($_POST['update'])){
 	
 }
 if(isset($_POST['updoffer'])){
-	echo "hi";
+	//echo "hi";
     $id= $_POST['oid'];
     $offername = $_POST['offername'];
     $offerdescrp = $_POST['offerdescrp'];
@@ -31,7 +31,7 @@ if(isset($_POST['updoffer'])){
 
     $dbcon = Database::getDb();
     $offer = new offers();
-    $count = $faq->updateFaq($id, $offername, $offerdescrp, $offervalid, $offerprice, $dbcon);
+    $count = $offer->updateOffer($id, $offername, $offerdescrp, $offervalid, $offerprice, $dbcon);
 
     if($count){
         header("Location: listoffer.php");
@@ -42,11 +42,11 @@ if(isset($_POST['updoffer'])){
 ?>
 <div class="container">
 <form action="" method="post">
-    <input type="hidden" class="form-control" name="oid" value="<?= $offer->offerId; ?>" />
+    <input type="hidden" class="form-control" name="oid" value="<?= $faq->offerId; ?>" />
     Offer Name: <input type="text" class="form-control" name="offername" value="<?= $faq->offerName; ?>" /><br/>
-    Offer Description: <textarea name="offerdescrp" class="form-control" rows="10" cols="50" value="<?= $offer->offerDesc; ?>" /><br />
-	Offer Validity: <input type="datetime-local" class="form-control" name="offervalid" value="<?= $offer->offerValidity; ?>" /><br/>
-	Offer Price: <input type="text" class="form-control" name="offerprice" value="<?= $offer->offerPrice; ?>" /><br/>
+    Offer Description: <textarea name="offerdescrp" class="form-control" rows="10" cols="50" ><?= $faq->offerDesc?></textarea><br />
+	Offer Validity: <input type="text" class="form-control" name="offervalid" value="<?= $faq->offerValidity; ?>" /><br/>
+	Offer Price: <input type="text" class="form-control" name="offerprice" value="<?= $faq->offerPrice; ?>" /><br/>
     <input type="submit"  class="form-control" name="updoffer" value="Update Offer">
 </form>
 </div>
