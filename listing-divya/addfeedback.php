@@ -8,10 +8,8 @@ require_once 'database.php';
 require_once 'feedback.php';
 	$db = Database::getDb();
 	$s = new feedback();
-
 if(isset($_POST['Addfeedback']))	
 {
-
 		$Email = $_POST['Addemail'];
 	$Message= $_POST['Addmessage'];
 	$count = $s->addfeedback($Email, $Message, $db);
@@ -25,16 +23,15 @@ if(isset($_POST['Addfeedback']))
 }
 ?>
 <div class="container">
-<form method="post">
   <h2>Tell us what you think</h2>
       <div class="form-group">
       <label>Email:</label>
-      <input type="email" class="form-control" name="Addemail" placeholder="Enter email">
+      <input type="email" class="form-control" name="Addemail" placeholder="Enter email" name="email_feedback">
     </div>
     <div class="form-group">
       <label>Message:</label>
-      <textarea type="text" class="form-control" name="Addmessage" placeholder="Enter your feeback upto 500 words" ></textarea>
+      <textarea type="text" class="form-control" name="Addmessage" placeholder="Enter your feeback upto 500 words" name="message"></textarea>
     </div>
-    <button type="submit"  name="Addfeedback" class="form-control">Submit</button>
+    <button type="submit" value="insert" name="Addfeedback" class="btn btn-primary">Submit</button>
   </form>
   </div>

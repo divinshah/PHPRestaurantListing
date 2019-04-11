@@ -19,13 +19,13 @@ $myfaq =  $s->getAllFaq(Database::getDb());
 foreach($myfaq as $faq){
     echo "<li><a href='faqDetail.php?id=$faq->faqId'>" .  $faq->question  . "</a>".
 	    "<div class='container'>".
-        "<form action='editfaq.php' method='post'>" .
+        "<form action='editfaq.php?id=$faq->faqId' method='post'>" .
         "<input type='hidden' class='form-control' value='$faq->faqId' name='id' />".
-        "<input type='submit' class='form-control' value='Update' name='update' />".
+        "<input type='submit' class='btn btn-primary' value='Update' name='update' />".
         "</form>" .
         "<form action='deleteFaq.php' method='post'>" .
         "<input type='hidden' class='form-control' value='$faq->faqId' name='id' />".
-        "<input type='submit' class='form-control' value='Delete' name='delete' />".
+        "<input type='submit' class='btn btn-primary' value='Delete' name='delete' />".
         "</form>".
 		"</div>".
         "</li>";

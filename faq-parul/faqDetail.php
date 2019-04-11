@@ -14,7 +14,7 @@ if(isset($_GET['id'])){
     $s = new faq();
     $f = $s->getFaqById($id, $dbcon);
 
-//var_dump($faq);
+	//var_dump($f);
 }
 
 echo  "Question : " . $f->question . "<br />";
