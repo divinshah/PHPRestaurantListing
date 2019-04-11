@@ -35,17 +35,17 @@ if(isset($_POST['AddOffer']))
 <form action="" method="post">
 <div class="form-group">
 	<label>Offer Name:</label>
-	<input type="text" class="form-control" name="offername" /> <br /></div>
+	<input type="text" class="form-control" name="offername" required /> <br /></div>
 	<div class="form-group">
 	<label>Offer Description:</label>
-	<textarea name="description" class="form-control" rows="10" cols="50" ></textarea> <br />
+	<textarea name="description" class="form-control" rows="10" cols="50" required ></textarea> <br />
 	</div>
 	<div class="form-group">
 	<label>Offer Validity:</label>
 	<input type="datetime-local" class="form-control" name="offervalidity" /> <br /></div>
 	<div class="form-group">
 	<label>Offer Price:</label>
-	<input type="text" class="form-control" name="offerprice" /> <br /></div>
+	<input type="text" class="form-control" name="offerprice" pattern='[0-9]+(\\.[0-9][0-9]?)?' /> <br /></div>
 	<div class="form-group">
 	<input type="submit" class="form-control" name="AddOffer" value="Add Offer" /></div>
 </form>

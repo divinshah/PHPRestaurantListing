@@ -10,26 +10,22 @@ include "header.php";
 require_once 'Database.php';
 require_once 'faq.php';
 	
-if(isset($_POST['update'])){
-	$id = $_POST['id'];
+if(isset($_GET['id'])){
+	$id = $_GET['id'];
 	
 	$dbcon = Database::getDb();
     $s = new faq();
 	//echo "hi";
-    $faq = $s->getFaqById($id, $dbcon);
-    //var_dump($faq);
+    $f = $s->getFaqById($id, $dbcon);
+    //var_dump($f);
 	
 }
 if(isset($_POST['updfaq'])){
-	echo "hi";
     $id= $_POST['fid'];
     $question = $_POST['question'];
     $answer = $_POST['answer'];
 
-
-    $dbcon = Database::getDb();
-    $faq = new faq();
-    $count = $faq->updateFaq($id, $question, $answer, $dbcon);
+    $count = $s->updateFaq($id, $question, $answer, $dbcon);
 
     if($count){
         header("Location: listfaq.php");
@@ -40,9 +36,9 @@ if(isset($_POST['updfaq'])){
 ?>
 <div class="container">
 <form action="" method="post">
-    <input type="hidden" class="form-control" name="fid" value="<?= $faq->faqId; ?>" />
-    Question: <input type="text" class="form-control" name="question" value="<?= $faq->question; ?>" /><br/>
-    Answer: <input type="text" class="form-control" name="answer" value="<?= $faq->answers; ?>" /><br />
+    <input type="hidden" class="form-control" name="fid" value="<?= $f->faqId; ?>" />
+    Question: <input type="text" class="form-control" name="question" value="<?= $f->question; ?>" required /><br/>
+    Answer: <input type="text" class="form-control" name="answer" value="<?= $f->answers; ?>" required /><br />
     <input type="submit"  class="form-control" name="updfaq" value="Update FAQ">
 </form>
 </div>
