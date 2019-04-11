@@ -1,11 +1,3 @@
-<!--
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
--->
-
 <?php
 require_once 'adminhome.html';
 ?>
@@ -20,10 +12,10 @@ require_once 'adminhome.html';
             <label> Name :</label>
             <input name="fname" class="form-control" placeholder="Enter Name" type="text">
         </div>
-        <div class="form-group">
+        <!--<div class="form-group">
             <label> Email :</label>
             <input name="email" class="form-control" placeholder="Enter Email" type="text">
-        </div>
+        </div>-->
         <div class="form-group">
             <button type="submit" name="search" class="btn btn-primary">Search</button>
         </div>

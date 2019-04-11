@@ -40,7 +40,7 @@ class Admin
         }
         
     }
-    
+    //Get admin details by ID
     public function getAdminById($id,$db)
     {
         $sql = "select * from admin_details where id=:id";
@@ -51,6 +51,48 @@ class Admin
         $pst->execute();
         $student = $pst->fetch(PDO::FETCH_OBJ);
         return $student;
+    }
+    //Get all admins with roles
+    public function getAllAdminsWithRole($db)
+    {
+        $sql = "select a.id, a.name,a.emailid,r.role_name,a.password from admin_details a inner join roles r on a.role = r.id";
+        $pdostm = $db ->prepare($sql);
+
+        //exceuting
+        $pdostm->execute();
+        $students = $pdostm->fetchAll(PDO::FETCH_OBJ);
+        return $students;
+    }
+    //update admin details
+    public function updateAdmin($id,$uname,$email,$role,$db)
+    {
+        $sql = "update admin_details
+            set name = :uname,
+            emailid = :email,
+            role = :role
+            where id = :id";
+        
+        $pst = $db->prepare($sql);
+        
+        $pst->bindParam(':id',$id);
+        $pst->bindParam(':uname',$uname);
+        $pst->bindParam(':email',$email);
+        $pst->bindParam(':role',$role);
+        
+        echo "Data Edited Successfully";
+        $count = $pst->execute();
+        return $count;      
+        
+    }
+    //delete admin data
+    public function deleteAdmin($id,$dbcon)
+    {
+        $sql = "delete from admin_details where id = :id";
+        
+        $pst = $dbcon->prepare($sql);
+        $pst->bindParam(':id',$id);
+        $count = $pst->execute();
+        return $count;
     }
 }
 

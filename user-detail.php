@@ -56,7 +56,6 @@ if(isset($_POST['Edit']))
                 <button type="submit" name="Edit" class="btn btn-primary"> Edit </button>
             </div>
         </form>
-    
 </div>
 
 
