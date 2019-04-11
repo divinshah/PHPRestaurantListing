@@ -152,7 +152,6 @@ function post()
 
 <?php
 $id = isset($_GET['listing_id']) ? $_GET['listing_id'] : '';
-echo $id; 
 ?>
 
   <form method='post' action="" onsubmit="return post();" id="container">
