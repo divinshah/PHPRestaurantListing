@@ -30,3 +30,7 @@ List of files-
 17.user_header.php
 18.user-detail.php
 19.user-login.php
+
+Features: Parul Gupta
+1.FAQs - Add, Edit, Delete, List, faq, detail
+2. Offers- Add, Edit, Delete, List, faq, detail
