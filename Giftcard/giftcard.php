@@ -17,7 +17,7 @@ class giftcard
         $s = $pdostm->fetchAll(PDO::FETCH_OBJ);
         return $s;
     }
-    public function getEmailById($Id, $db){
+    public function getGiftcardById($Id, $db){
         $sql = "SELECT * FROM giftcard where id = :Id";
         $pst = $db->prepare($sql);
         $pst->bindParam(':Id', $Id);
@@ -44,7 +44,7 @@ class giftcard
         $count = $pst->execute();
         return $count;
     }
-    public function deletegiftcard($Id, $db){
+    public function deletegiftcard($id, $db){
         $sql = "DELETE FROM giftcard WHERE id = :Id";
         $pst = $db->prepare($sql);
         $pst->bindParam(':Id', $id);
@@ -57,13 +57,13 @@ class giftcard
 				Name2 = :Name2,
 				Email = :Email,
                 Message = :Message
-                WHERE id = :Id";
+                WHERE id = :id";
         $pst =  $db->prepare($sql);
 		$pst->bindParam(':Name1', $Name1);
 		$pst->bindParam(':Name2', $Name2);
         $pst->bindParam(':Email', $Email);
         $pst->bindParam(':Message', $Message);
-        $pst->bindParam(':Id', $Id);
+        $pst->bindParam(':id', $Id);
         $count = $pst->execute();
         return $count;
     } 
