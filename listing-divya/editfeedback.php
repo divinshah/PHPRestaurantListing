@@ -8,7 +8,7 @@ require_once 'database.php';
 require_once 'Feedback.php';
 	
 if(isset($_POST['update'])){
-	$id = $_POST['ID'];
+	$id = $_POST['Id'];
 	
 	$dbcon = Database::getDb();
     $s = new feedback();

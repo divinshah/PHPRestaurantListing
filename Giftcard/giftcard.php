@@ -1,8 +1,8 @@
 <?php
-class feedback
+class giftcard
 {
-	public function getEmail($db){
-        $query = "SELECT * FROM feedback";
+	public function getName1($db){
+        $query = "SELECT * FROM giftcard";
         $pdostm = $db->prepare($query);
         $pdostm->execute();
         //fetch all result
@@ -10,50 +10,57 @@ class feedback
         return $results;
     }
     public function getMessagesFromEmail($db, $Email){
-        $query = "SELECT * FROM feedback WHERE Email= :Email";
+        $query = "SELECT * FROM giftcard WHERE Email= :Email";
         $pdostm = $db->prepare($query);
-        $pdostm->bindValue(':Email', $Email, PDO::PARAM_STR);
+        $pdostm->bindValue(':Email', $Name1, PDO::PARAM_STR);
         $pdostm->execute();
         $s = $pdostm->fetchAll(PDO::FETCH_OBJ);
         return $s;
     }
     public function getEmailById($Id, $db){
-        $sql = "SELECT * FROM feedback where Id = :Id";
+        $sql = "SELECT * FROM giftcard where id = :Id";
         $pst = $db->prepare($sql);
         $pst->bindParam(':Id', $Id);
         $pst->execute();
         return $pst->fetch(PDO::FETCH_OBJ);
     }
-    public function getFEEDBACK($dbcon){
-        $sql = "SELECT * FROM feedback";
+    public function getgiftcard($dbcon){
+        $sql = "SELECT * FROM giftcard";
         $pdostm = $dbcon->prepare($sql);
         $pdostm->execute();
         $Email = $pdostm->fetchAll(PDO::FETCH_OBJ);
         return $Email;
     }
-    public function addfeedback($Email, $Message, $db)
+    public function addgiftcard($Name1, $Name2, $Email, $Message, $db)
     {
-        $sql = "INSERT INTO feedback (Email, Message) 
-              VALUES (:Email, :Message) ";
+        $sql = "INSERT INTO giftcard (Name1, Name2, Email, Message) 
+              VALUES (:Name1, :Name2, :Email, :Message) ";
         $pst = $db->prepare($sql);
+		$pst->bindParam(':Name1', $Name1);
+		$pst->bindParam(':Name2', $Name2);
         $pst->bindParam(':Email', $Email);
         $pst->bindParam(':Message', $Message);
+        
         $count = $pst->execute();
         return $count;
     }
-    public function deletefeedback($Id, $db){
-        $sql = "DELETE FROM feedback WHERE Id = :Id";
+    public function deletegiftcard($Id, $db){
+        $sql = "DELETE FROM giftcard WHERE id = :Id";
         $pst = $db->prepare($sql);
         $pst->bindParam(':Id', $id);
         $count = $pst->execute();
         return $count;
     }
-    public function updatefeedback($Id, $Email, $Message, $db){
-        $sql = "Update feedback
-                set Email = :Email,
+    public function updategiftcard($Id, $Name1, $Name2, $Email, $Message, $db){
+        $sql = "Update giftcard
+                set Name1 = :Name1,
+				Name2 = :Name2,
+				Email = :Email,
                 Message = :Message
-                WHERE Id = :Id";
+                WHERE id = :Id";
         $pst =  $db->prepare($sql);
+		$pst->bindParam(':Name1', $Name1);
+		$pst->bindParam(':Name2', $Name2);
         $pst->bindParam(':Email', $Email);
         $pst->bindParam(':Message', $Message);
         $pst->bindParam(':Id', $Id);
