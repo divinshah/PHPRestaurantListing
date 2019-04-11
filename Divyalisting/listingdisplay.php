@@ -39,7 +39,7 @@ include "header.php";
           
           echo "<div class='col-md-4 col-xs-6'>";
           
-          echo "<h2><a href='listingpage.php?id=" .$row['ID'] . "'>". ucfirst($row['listing_name']) ."</a></h2><div>";
+          echo "<h2><a href='listingpage.php?listing_id=" .$row['ID'] . "'>". ucfirst($row['listing_name']) ."</a></h2><div>";
           echo "<p><strong>". ucfirst($row['listing_category']) ."</strong></p>";
           echo "<p>City:". ucfirst($row['listing_city']) ."</p>";
           echo "<p>Contact:". ucfirst($row['listing_contact']) ."</p>";
