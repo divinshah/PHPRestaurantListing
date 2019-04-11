@@ -8,23 +8,23 @@ require_once 'database.php';
 require_once 'Feedback.php';
 	
 if(isset($_POST['update'])){
-	$id = $_POST['ID'];
+	$id = $_POST['id'];
 	
 	$dbcon = Database::getDb();
     $s = new feedback();
 	//echo "hi";
-    $faq = $s->getEmailById($id, $dbcon);
+    $feedbacks = $s->getEmailById($id, $dbcon);
     //var_dump($faq);
 	
 }
 if(isset($_POST['updfeedback'])){
-	echo "hi";
+	//echo "hi";
     $id= $_POST['fid'];
     $Email = $_POST['Email'];
     $Message = $_POST['Message'];
     $dbcon = Database::getDb();
-    $feedback = new feedback();
-    $count = $feedback->updatefeedback($Id, $Email, $Message, $dbcon);
+    $s = new feedback();
+    $count = $s->updatefeedback($id, $Email, $Message, $dbcon);
     if($count){
         header("Location: listfeedback.php");
     } else {
@@ -34,9 +34,10 @@ if(isset($_POST['updfeedback'])){
 ?>
 <div class="container">
 <form action="" method="post">
-    <input type="hidden" class="form-control" name="fid" value="<?= $feedback->Id; ?>" />
-    Email: <input type="text" class="form-control" name="Email" value="<?= $feedback->Email; ?>" /><br/>
-    Message: <input type="text" class="form-control" name="Message" value="<?= $feedback->Message; ?>" /><br />
+    <input type="hidden" class="form-control" name="fid" value="<?= $feedbacks->id; ?>" />
+    Email: <input type="text" class="form-control" name="Email" value="<?= $feedbacks->Email; ?>" /><br/>
+    Message: <input type="text" class="form-control" name="Message" value="<?= $feedbacks->Message; ?>" /><br />
     <input type="submit"  class="form-control" name="updfeedback" value="Update Feedback">
 </form>
 </div>
+

@@ -11,15 +11,15 @@ $dbcon = Database::getDb();
 $s = new feedback();
 $myfeedback =  $s->getFEEDBACK($dbcon);
 
-foreach($myfeedback as $feedback){
-    echo "<li><a href='detailfeedback.php?Id=$feedback->ID'>" .  $feedback->Email  . "</a>".
+foreach($myfeedback as $feedbacks){
+    echo "<li><a href='detailfeedback.php?Id=$feedbacks->ID'>" .  $feedbacks->Email  . "</a>".
 	    "<div class='container'>".
         "<form action='editfeedback.php' method='post'>" .
-        "<input type='hidden' class='form-control' value='$feedback->ID' name='id' />".
+        "<input type='hidden' class='form-control' value='$feedbacks->ID' name='id' />".
         "<input type='submit' class='form-control' value='Update' name='update' />".
         "</form>" .
         "<form action='deletefeedback.php' method='post'>" .
-        "<input type='hidden' class='form-control' value='$feedback->ID' name='id' />".
+        "<input type='hidden' class='form-control' value='$feedbacks->ID' name='id' />".
         "<input type='submit' class='form-control' value='Delete' name='delete' />".
         "</form>".
 		"</div>".

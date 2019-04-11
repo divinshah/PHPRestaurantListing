@@ -41,8 +41,8 @@ class feedback
         $count = $pst->execute();
         return $count;
     }
-    public function deletefeedback($Id, $db){
-        $sql = "DELETE FROM feedback WHERE Id = :Id";
+    public function deletefeedback($id, $db){
+        $sql = "DELETE FROM feedback WHERE id = :Id";
         $pst = $db->prepare($sql);
         $pst->bindParam(':Id', $id);
         $count = $pst->execute();
@@ -52,11 +52,11 @@ class feedback
         $sql = "Update feedback
                 set Email = :Email,
                 Message = :Message
-                WHERE Id = :Id";
+                WHERE id = :id";
         $pst =  $db->prepare($sql);
         $pst->bindParam(':Email', $Email);
         $pst->bindParam(':Message', $Message);
-        $pst->bindParam(':Id', $Id);
+        $pst->bindParam(':id', $Id);
         $count = $pst->execute();
         return $count;
     } 
