@@ -64,7 +64,7 @@ CREATE TABLE `blog` (
 --
 
 CREATE TABLE `businesses` (
-  `id` int(11) NOT NULL,
+  `ID` int(11) NOT NULL,
   `listing_name` varchar(20) NOT NULL,
   `listing_category` varchar(20) NOT NULL,
   `listing_city` varchar(20) NOT NULL,
@@ -79,9 +79,112 @@ CREATE TABLE `businesses` (
 --
 
 INSERT INTO `businesses` (`ID`, `listing_name`, `listing_category`, `listing_city`, `listing_contact`, `listing_email`, `published`, `listing_featured`) VALUES
-(1, 'honest', 'brampton', 'restaurant', '9724330544', 'div@gmail.com', 0, 0),
-(2, 'Rajdhani', 'Etobicoke', 'restaurant ', '99982224312', 'ji@th.com', 0, 0),
-(3, 'Kismat', 'Toronot', 'restaurant', '9998761232', 'kis@ks.com', 0, 0);
+(1, 'honest', 'restaurant', 'brampton', '9724330544', 'div@gmail.com', 0, 0),
+(2, 'Rajdhani', 'restaurant', 'Etobicoke', '99982224312', 'ji@th.com', 0, 0),
+(3, 'Kismat', 'restaurant', 'Toronto', '9998761232', 'kis@ks.com', 0, 0),
+(4, 'Madras Hut', 'restaurant', 'Toronto', 'xxxxxxxx', 'madras@gmail.com', 0, 0),
+(9, 'honest', 'Italian', 'Toronto', '2313423423', 'divyashah9724330544@gmail.com', 0, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `comments`
+--
+
+CREATE TABLE `comments` (
+  `id` int(11) NOT NULL,
+  `name` varchar(20) NOT NULL,
+  `comment` text NOT NULL,
+  `post_time` varchar(30) NOT NULL,
+  `listingid` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `comments`
+--
+
+INSERT INTO `comments` (`id`, `name`, `comment`, `post_time`, `listingid`) VALUES
+(1, 'great', '22', '2019-04-10 10:46:21', 1),
+(5, 'acw', 'acw', '2019-04-10 12:41:14', 0),
+(6, 'daw', 'vas', '2019-04-10 12:42:01', 5),
+(21, 'gwe', 'wrw', '2019-04-10 18:35:52', 0),
+(23, 'jikk', 'tyh', '2019-04-10 18:46:14', 0),
+(24, 'ascvfawga', 'awfaw', '2019-04-10 18:58:31', 0),
+(25, 'rd', 'wsgsr', '2019-04-10 18:59:58', 0),
+(26, 'wq', 'ce', '2019-04-10 19:07:55', 0),
+(27, 'divy', 'awdfaw', '2019-04-11 09:04:24', 0),
+(28, 'efw', 'asdf', '2019-04-11 09:07:33', 0),
+(29, 'vds', 'awcw', '2019-04-11 09:11:13', 2),
+(30, 'dwad', 'cedc', '2019-04-11 09:12:01', 3),
+(31, 'new', 'list3', '2019-04-11 10:17:12', 3);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `gallery`
+--
+
+CREATE TABLE `gallery` (
+  `id` int(11) NOT NULL,
+  `name` varchar(20) NOT NULL,
+  `category` varchar(50) NOT NULL,
+  `image` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `gallery`
+--
+
+INSERT INTO `gallery` (`id`, `name`, `category`, `image`) VALUES
+(1, 'nie', 'event', '388204.jpg'),
+(3, 'Toronto', 'Restaurant', '545313.jpg'),
+(6, 'test', 'Restaurant', '285157.jpg'),
+(7, 'dive', 'place', '120897.jpg');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `businesses`
+--
+ALTER TABLE `businesses`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- Indexes for table `comments`
+--
+ALTER TABLE `comments`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `gallery`
+--
+ALTER TABLE `gallery`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `businesses`
+--
+ALTER TABLE `businesses`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT for table `comments`
+--
+ALTER TABLE `comments`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+
+--
+-- AUTO_INCREMENT for table `gallery`
+--
+ALTER TABLE `gallery`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+COMMIT;
 
 -- --------------------------------------------------------
 
@@ -333,6 +436,77 @@ ALTER TABLE `offers`
 --
 ALTER TABLE `registration`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+COMMIT;
+
+CREATE TABLE `roles` (
+  `id` int(11) NOT NULL,
+  `role_name` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `roles`
+--
+
+INSERT INTO `roles` (`id`, `role_name`) VALUES
+(1, 'Admin'),
+(3, 'Employee');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `roles`
+--
+ALTER TABLE `roles`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `roles`
+--
+ALTER TABLE `roles`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+COMMIT;
+
+CREATE TABLE `newsletter` (
+  `newsletterid` int(11) NOT NULL,
+  `topic` varchar(500) NOT NULL,
+  `title` varchar(500) NOT NULL,
+  `message` varchar(1000) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `newsletter`
+--
+
+INSERT INTO `newsletter` (`newsletterid`, `topic`, `title`, `message`) VALUES
+(1, 'health', 'vaccination camp in toronto', ''),
+(2, 'event', 'new events in toronto', 'dfkgkrbkjanvjzn,jnaeg.'),
+(3, 'health', 'jdnfoierg', 'd,mvkrvkdnkfdfsnrijbnkkkmxksjinb');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `newsletter`
+--
+ALTER TABLE `newsletter`
+  ADD PRIMARY KEY (`newsletterid`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `newsletter`
+--
+ALTER TABLE `newsletter`
+  MODIFY `newsletterid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
