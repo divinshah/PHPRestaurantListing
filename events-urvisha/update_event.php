@@ -1,14 +1,14 @@
 <?php
 require_once './model/Database.php';
 require_once './model/event.php';
-
+include 'header.php';
 if(isset($_POST['update'])){
     $id = $_POST['id'];
 
     $dbcon = Database::getDb();
     $e = new Event();
     $event = $e->getEventsById($id, $dbcon);
-    //var_dump($event);
+    var_dump($event);
 
 }
 
@@ -39,16 +39,21 @@ if(isset($_POST['updeve']))
 
 ?>
 
-
+<div class="jumbotron">
+    <div class="container">
+        <h1>Update</h1>
+    </div>
+</div>
 <form action="" method="post">
 
-	<input type="hidden" name="urvisha" value="<?= $event-> eventId;?>" />
+	<!--<input type="hidden" name="urvisha" value="<?= $event-> eventId;?>" /> -->
 
 	<label>Name: </label>
 	<input type="text" name="name" value="<?= $event->eventName; ?>"/> <br/>
 	
 	<label>Description: </label>
-	<textarea name="description" rows="4" cols="50" value="<?= $event->eventDescription; ?>"></textarea><br/>
+	<textarea name="description" rows="4" cols="50"><?= $event->eventDescription; ?></textarea><br/>
+	
 	
 	<label>Location: </label>
 	<input type="text" name="location" value="<?= $event->eventLocation; ?>" /> <br/>

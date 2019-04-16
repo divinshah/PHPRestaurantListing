@@ -2,7 +2,7 @@
 
 	require_once'./model/database.php';
 	require_once './model/newsletter.php';
-	
+	include'header.php';
 	
 	if(isset($_POST['update'])){
 		
@@ -48,10 +48,12 @@
 	<input type="text" name="title" value="<?= $nwsltr->title; ?>"/> <br/>
 	
 	<label>Message: </label>
-	<textarea name="message" rows="4" cols="50" value="<?= $nwsltr->message; ?>"></textarea><br/>
+	<textarea name="message" rows="4" cols="50"><?= $nwsltr->message; ?></textarea><br/>
 	
 	
 	<input type="submit" name="updnews" value="update Newsletter" />
 </form>
 
-
+<?php
+	include'footer.php';
+?>

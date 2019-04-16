@@ -2,7 +2,7 @@
 
 require_once'./model/database.php';
 require_once'./model/newsletter.php';
-
+include'header.php';
 	
 	$db = Database::getDb();
 	$n = new Newsletter();
