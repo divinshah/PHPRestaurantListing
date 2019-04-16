@@ -16,7 +16,6 @@ if(isset($_GET['id'])){
 
 	//var_dump($f);
 }
-
 echo  "Question : " . $f->question . "<br />";
 echo  "Answer : " . $f->answers . "<br />";
 ?>
