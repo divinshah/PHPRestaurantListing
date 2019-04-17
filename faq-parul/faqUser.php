@@ -31,6 +31,7 @@ include "header.php";
     cursor: pointer;
     font-weight: bold;
 	text-transform:capitalize;
+	color:#1A5276;
 }
  
 .faq_answer_container {
@@ -45,6 +46,15 @@ include "header.php";
 	width: 50%;
 	height: 30px;
 	margin-left:300px;
+}
+.faq_ans{
+	font-family:Arial, Helvetica, sans-serif;
+    font-size:15px;
+	width: 50%;
+	height: 30px;
+	margin-left:300px;
+	font-style: italic;
+	color:#34495E;
 }
 </style>
 
@@ -65,7 +75,7 @@ foreach($myfaq as $faq){
    <div class = 'faqques'>
     <div class='faq_question'> <ul> Question: $faq->question </ul></div></div>
            <div class='faq_answer_container'>
-              <div class='faq_answer'> <ul> Answer: $faq->answers </ul></div>
+             <div class='faq_ans'> <div class='faq_answer'> <ul> Answer: $faq->answers </ul></div></div>
            </div>        
     </div>
  </div>";

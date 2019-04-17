@@ -1,12 +1,6 @@
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-
 <!--Php code-->
 <?php
-
+require_once 'header.php';
 require_once 'Database.php';
 require_once 'User.php';
 
@@ -23,6 +17,7 @@ if(isset($_POST['regiuser']))
     $addr = $_POST['addr'];
     $pcode = $_POST['pcode'];    
     $myuser = $u -> addUser($fname,$email,$pwd,$cpwd,$mobile,$addr,$pcode);
+    header("Location: user-login.php");    
 }
 
 ?>
@@ -67,7 +62,15 @@ if(isset($_POST['regiuser']))
             <label>Postal Code :</label>
             <input name="pcode" class="form-control" placeholder="Postal Code" type="text">
         </div>
-        <button type="submit" name="regiuser" class="btn btn-primary">Create Account</button>
+        <div class="form-group">
+            <button type="submit" name="regiuser" class="btn btn-primary">Create Account</button>
+        </div>
+        <div class="form-group">
+            Already have an account? <a href="user-login.php" class="ml-2">Sign In</a> Here...
+        </div>
     </form>
 </div>
 
+<?php
+require_once 'footer.php';
+?>

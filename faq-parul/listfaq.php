@@ -7,6 +7,26 @@ include "header.php";
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="css/stylefaq.css">
+<style>
+a{
+	font-family:Arial, Helvetica, sans-serif;
+	text-transform:capitalize;
+	font-size:20px;
+	color: #1A5276;
+}
+a:link {
+  color: green;
+}
+a:visited {
+  color: #1A5276;
+}
+a:hover {
+  color: hotpink;
+}
+a:active {
+  color: blue;
+}
+</style>
 <?php
 require_once 'Database.php';
 require_once 'faq.php';

@@ -2,10 +2,10 @@
 <?php
 require_once 'header.php';
 require_once 'Database.php';
-require_once 'User.php';
+require_once 'Admin.php';
 
 $db = Database :: getDB();
-$u = new User();
+$u = new Admin();
 
 
 if(isset($_POST['login']))
@@ -22,7 +22,7 @@ if(isset($_POST['login']))
     {
         session_start();
         $_SESSION['email'] = $email;
-        header("Location: user-detail.php?id=$id");
+       // header("Location: user-detail.php?id=$id");
     }
     else 
     {
@@ -51,9 +51,9 @@ if(isset($_POST['login']))
         <div class="form-group">
             <button type="submit" name="login" class="btn btn-primary">Login</button>
         </div>
-        <div class="form-group">
+        <!--<div class="form-group">
             Don't have an account? <a href="Add_User.php" class="ml-2">Sign Up</a>
-        </div>
+        </div>-->
     </form>
 </div>
 <?php
