@@ -1,12 +1,13 @@
 <?php
-include 'header.php';
-require_once './model/Database.php';
-require_once './model/event.php';
-
+//include 'header.php';
+require_once './model/Database.php'; // get the database
+require_once './model/event.php';  // get main event function
+require_once 'file_util.php';  // get file list function
+require_once 'image_util.php';  // process image function
 	//validations
 	
 	$nameerr = "";
-	$descerr = "";
+	$descerr = "";	
 	$locerr = "";
 	$dateerr = "";
 	$timerr = "";
@@ -97,11 +98,9 @@ require_once './model/event.php';
 		$time = $_POST['time'];
 		$fee = $_POST['fee'];
     
-
-
        $db = Database::getDb();
        $e = new Event();
-     //  $myeve = $e -> addEvent($name, $description, $location, $date, $time, $fee);
+      $myeve = $e -> addEvent($name, $description, $location, $date, $time, $fee);
 
 
        if($myeve){
@@ -121,6 +120,11 @@ require_once './model/event.php';
     </div>
 
 <form action="" method="post">
+
+	<label>upload image:</label>
+	<input type="hidden" name="action" value="upload"/></br>
+	<input type="file" name="file1"/></br>
+	<input id="upload_button" type="submit" value="Upload"/></br>
 
 	<label>Name: </label>
 	<input type="text" name="name" value="<?= $name;  ?>" /> 
@@ -144,7 +148,6 @@ require_once './model/event.php';
 		?>
 	</span>
 	</br>
-	
 	
 	
 	<label>Location: </label>

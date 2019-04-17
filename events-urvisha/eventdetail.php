@@ -30,9 +30,6 @@ echo  "fee : " . $event->eventFee . "<br />"; */
 </div>
 <form action="" method="post">
 
-
-	<!--<label>Name: </label>
-	<input type="text" name="name" value=" <?= $event->eventName; ?>"/> <br/> -->
 	 
 	<label>Description: </label> 
 	<?= $event->eventDescription; ?><br/>
