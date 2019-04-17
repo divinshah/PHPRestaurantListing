@@ -94,6 +94,20 @@ class Admin
         $count = $pst->execute();
         return $count;
     }
+    //Check Login Credentials
+    public function checkLoginCredentails($email,$pwd, $db)
+    {
+        $sql = 'select * from admin_details where emailid = :email and password = :pwd';
+        
+        $pst = $db -> prepare($sql);
+        $pst->bindParam(':email',$email);
+        $pst->bindParam(':pwd',$pwd);
+        $pst->execute();
+        $students = $pst->fetchAll(PDO::FETCH_OBJ);
+        return $students;
+        
+        
+    }
 }
 
 ?>
