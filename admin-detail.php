@@ -1,29 +1,30 @@
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-
 <?php
+
 require_once 'Database.php';
 require_once 'Admin.php';
 
 $dbcon = Database::getDb();
 $u = new Admin();
 $role = $u->getAllRoles($dbcon);
+$id = $_GET['id'];  
 if(isset($_GET['id']))
 {
     $id = $_GET['id'];  
     $admin = $u->getAdminById($id,$dbcon);
 }
+if(isset($_POST['edit']))
+{
+    
+    header("Location: edit-admin.php?id=$id");
+}
 ?>
-
-<div class="jumbotron">
-    <div class="container">
-        <h1>Admin Registration</h1>
-    </div>
-</div>
+<?php
+require_once 'adminhome.php';
+?>
 <div class="container">
+    <div class="card-header">
+          <i class="fa fa-table"></i> Admin Details</div>
+        <div class="card-body">
     <form action="" method="post">
         <div class="form-group">
             <input name="id" class="form-control" value="<?= $admin->id; ?>" type="hidden" />
@@ -46,7 +47,10 @@ if(isset($_GET['id']))
             ?>
         </div>
         <div class="form-group">
+            <button class="btn btn-primary" name="edit">Edit</button>
         </div>
     </form>
 </div>
-
+<?php
+require_once 'adminfooter.html';
+?>

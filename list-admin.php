@@ -1,11 +1,12 @@
 <?php
-require_once 'adminhome.html';
+require_once 'adminhome.php';
 ?>
 <div class="card mb-3">
+        
+    <div class="container">
         <div class="card-header">
           <i class="fa fa-table"></i> List of Admin</div>
         <div class="card-body">
-    <div class="container">
         <form action="" method="post">
         <div class="form-group">
             <label> Name :</label>

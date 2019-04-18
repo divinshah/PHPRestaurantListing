@@ -1,3 +1,28 @@
+<?php
+require_once 'Database.php';
+require_once 'Admin.php';
+$db = Database::getDb();    
+    $u = new Admin();
+    session_start();
+    $email = $_SESSION['email'];
+    
+    $login = $u -> getUseridByEmail($email, $db);
+    
+    foreach($login as $l)
+    {
+        $id = $l->id;
+    }
+    if($login)
+    {
+        //session_start();
+        $_SESSION['email'] = $email;
+        //header("Location: user-detail.php?id=$id");
+    }
+    else 
+    {
+        echo "Invalid login credentials";
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,7 +51,7 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
-          <a class="nav-link" href="#">
+          <a class="nav-link" href="admin-dashboard.php">
             <i class="fa fa-fw fa-dashboard"></i>
             <span class="nav-link-text">Dashboard</span>
           </a>
@@ -84,16 +109,12 @@
         </li>
       </ul>
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle mr-lg-2" id="messagesDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="fa fa-fw fa-envelope"></i>
-            <span class="d-lg-none">Messages
-              <span class="badge badge-pill badge-primary">12 New</span>
-            </span>
-            <span class="indicator text-primary d-none d-lg-block">
-              <i class="fa fa-fw fa-circle"></i>
-            </span>
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
+          <a class="nav-link" href="admin-detail.php?id=<?= $id; ?>">
+            <i class="fa fa-fw fa-user"></i>
+            <span class="nav-link-text">Details</span>
           </a>
+        
           <!-- <div class="dropdown-menu" aria-labelledby="messagesDropdown">
             <h6 class="dropdown-header">New Messages:</h6>
             <div class="dropdown-divider"></div>
@@ -118,6 +139,7 @@
             <a class="dropdown-item small" href="#">View all messages</a>
           </div> -->
         </li>
+          
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle mr-lg-2" id="alertsDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="fa fa-fw fa-bell"></i>
@@ -161,7 +183,7 @@
             <a class="dropdown-item small" href="#">View all alerts</a>
           </div> -->
         </li>
-        <li class="nav-item">
+        <!--<li class="nav-item">
           <form class="form-inline my-2 my-lg-0 mr-lg-2">
             <div class="input-group">
               <input class="form-control" type="text" placeholder="Search for...">
@@ -172,7 +194,7 @@
               </span>
             </div>
           </form>
-        </li>
+        </li>-->
         <li class="nav-item">
           <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
             <i class="fa fa-fw fa-sign-out"></i>Logout</a>
@@ -184,4 +206,3 @@
     
     <!-- /.container-fluid-->
     <!-- /.content-wrapper-->
-    

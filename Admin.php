@@ -108,6 +108,19 @@ class Admin
         
         
     }
+    // Get Id by email from tghe session value
+    public function getUseridByEmail($email,$db)
+        
+    {
+        $sql = 'select * from admin_details where emailid = :email';
+        
+        $pst = $db -> prepare($sql);
+        $pst->bindParam(':email',$email);
+        $pst->execute();
+        $students = $pst->fetchAll(PDO::FETCH_OBJ);
+        return $students;
+        
+    }
 }
 
 ?>

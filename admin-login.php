@@ -22,14 +22,14 @@ if(isset($_POST['login']))
     {
         session_start();
         $_SESSION['email'] = $email;
-       // header("Location: user-detail.php?id=$id");
+        header("Location: admin-dashboard.php");
+        //echo $_SESSION['email'];
     }
     else 
     {
         echo "Invalid login credentials";
     }
 }
-
 
 ?>
 
@@ -51,9 +51,6 @@ if(isset($_POST['login']))
         <div class="form-group">
             <button type="submit" name="login" class="btn btn-primary">Login</button>
         </div>
-        <!--<div class="form-group">
-            Don't have an account? <a href="Add_User.php" class="ml-2">Sign Up</a>
-        </div>-->
     </form>
 </div>
 <?php
