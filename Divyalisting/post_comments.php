@@ -2,7 +2,7 @@
 $host="localhost";
 $username="root";
 $password="";
-$databasename="listingtest";
+$databasename="listingnew";
 
 $connect=mysqli_connect($host,$username,$password);
 $db=mysqli_select_db($connect, $databasename);

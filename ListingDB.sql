@@ -328,8 +328,7 @@ ALTER TABLE `blog`
 --
 -- Indexes for table `business`
 --
-ALTER TABLE `business`
-  ADD PRIMARY KEY (`ID`);
+
 
 --
 -- Indexes for table `cities`
@@ -388,12 +387,6 @@ ALTER TABLE `admin_details`
 --
 ALTER TABLE `blog`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `business`
---
-ALTER TABLE `business`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `cities`
