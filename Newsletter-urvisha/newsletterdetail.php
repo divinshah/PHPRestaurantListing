@@ -1,7 +1,7 @@
 <?php
 require_once './model/Database.php';
 require_once './model/newsletter.php';
-
+include'header.php';
 
 if(isset($_GET['id'])){
     $id = $_GET['id'];
@@ -18,4 +18,8 @@ echo  "message : " . $nwsltr->message . "<br />";
 
 
 
+?>
+
+<?php
+	include'footer.php';
 ?>

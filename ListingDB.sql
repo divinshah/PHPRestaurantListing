@@ -214,9 +214,9 @@ INSERT INTO `cities` (`cityId`, `cityName`, `isVisible`) VALUES
 
 CREATE TABLE `contact` (
   `id` int(11) NOT NULL,
-  `name` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
-  `message` varchar(500) NOT NULL
+  `message` varchar(500) NOT NULL,
+  `reply` varchar(500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -500,6 +500,24 @@ ALTER TABLE `newsletter`
 --
 ALTER TABLE `newsletter`
   MODIFY `newsletterid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+COMMIT;
+
+CREATE TABLE `blogs` (
+  `ID` int(10) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `datetime` datetime NOT NULL,
+  `message` varchar(1000) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+ALTER TABLE `blogs`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- AUTO_INCREMENT for table `blogs`
+--
+ALTER TABLE `blogs`
+  MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

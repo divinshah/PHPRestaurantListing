@@ -2,7 +2,7 @@
 
 require_once './model/Database.php';
 require_once './model/newsletter.php';
-
+include'header.php';
 	$dbcon = Database::getDb();
 	$n = new newsletter();
 	$nwsltr =  $n->getAllNewsletter($dbcon);
@@ -22,6 +22,8 @@ foreach($nwsltr as $nws){
 
 
 
+
+	include'footer.php';
 
 
 ?>

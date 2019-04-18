@@ -12,3 +12,7 @@ if(isset($_POST['delete'])){
         header("Location: newsletter_list.php");
     }
 }
+
+<?php
+	include'footer.php';
+?>
