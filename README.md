@@ -1,9 +1,10 @@
 # project-famousfive
 project-famousfive created by GitHub Classroom
 Features: Divya
-1. Business Listing- Add, update, Delete, Details for listing
-2. Gallery
-3. Comments on the listing
+database.php, customerror.php
+1. Business Listing- addListing.php, updateListing.php, viewlistings.php, deleteListing.php, getListing.php
+2. Gallery- addnew.php, delete_image.php, displayimages.php, dbconfig.php, index.php
+3. Comments on the listing- post_comments.php, deleteComment.php, delete.php
 
 Features: Anjali Panchal
 1. User Panel - Register, Login, Update, Delete , List , Details, Change Password
