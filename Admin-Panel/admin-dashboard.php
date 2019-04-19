@@ -28,7 +28,7 @@ $offer = $d->getOfferCount($db);
               </div>
               <div class="mr-5"><?= $user; ?> New User !</div>
             </div>
-            <a class="card-footer text-white clearfix small z-1" href="#">
+            <a class="card-footer text-white clearfix small z-1" href="../Admin-Panel/list-admin.php">
               <span class="float-left">View Details</span>
               <span class="float-right">
                 <i class="fa fa-angle-right"></i>
@@ -44,8 +44,8 @@ $offer = $d->getOfferCount($db);
               </div>
               <div class="mr-5"><?= $business; ?> New Business !</div>
             </div>
-            <a class="card-footer text-white clearfix small z-1" href="#">
-              <span class="float-left">View Details</span>
+            <a class="card-footer text-white clearfix small z-1" href="../Divyalisting/viewlistings.php">
+                <span class="float-left">View Details</span>
               <span class="float-right">
                 <i class="fa fa-angle-right"></i>
               </span>
@@ -60,7 +60,7 @@ $offer = $d->getOfferCount($db);
               </div>
               <div class="mr-5"><?= $event; ?> Upcoming Events!</div>
             </div>
-            <a class="card-footer text-white clearfix small z-1" href="#">
+            <a class="card-footer text-white clearfix small z-1" href="../events-urvisha/listevent.php">
               <span class="float-left">View Details</span>
               <span class="float-right">
                 <i class="fa fa-angle-right"></i>
@@ -76,7 +76,7 @@ $offer = $d->getOfferCount($db);
               </div>
               <div class="mr-5"><?= $offer  ; ?> New Offers!</div>
             </div>
-            <a class="card-footer text-white clearfix small z-1" href="#">
+            <a class="card-footer text-white clearfix small z-1" href="../offers-parul/listoffer.php">
               <span class="float-left">View Details</span>
               <span class="float-right">
                 <i class="fa fa-angle-right"></i>
