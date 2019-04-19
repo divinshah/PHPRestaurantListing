@@ -1,5 +1,5 @@
 <?php
-include "../headerfooter/header.php";
+include "../headerfooter/adminhome.php";
 ?> 
 <div class="jumbotron">
     <div class="container">
@@ -46,7 +46,7 @@ a:active {
         </thead>
         <tbody>
 <?php
-require_once 'Database.php';
+require_once '../model/Database.php';
 require_once 'faq.php';
 
 $dbcon = Database::getDb();
@@ -68,5 +68,5 @@ foreach($myfaq as $faq){
 </tbody>
 </table>
 <?php
-include "../headerfofooter/footer.php";
+include "../headerfooter/adminfooter.html";
 ?>

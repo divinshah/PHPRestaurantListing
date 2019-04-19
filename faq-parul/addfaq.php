@@ -41,7 +41,7 @@ textarea {
 }
 </style>
 <?php
-require_once 'Database.php';
+require_once '../model/Database.php';
 require_once 'faq.php';
 
 
@@ -64,7 +64,7 @@ if(isset($_POST['AddQuestion']))
 }
 ?>
 <?php
-include "../headerfooter/header.php";
+include "../headerfooter/adminhome.php";
 ?> 
 <div class="jumbotron">
     <div class="container">
@@ -85,5 +85,5 @@ include "../headerfooter/header.php";
 	<input type="submit" class="button" name="AddQuestion" value="ADD" /></div>
 </form>
 <?php
-include "../headerfooter/footer.php";
+include "../headerfooter/adminfooter.html";
 ?> 

@@ -1,5 +1,5 @@
 <?php
-include "../headerfooter/header.php";
+include "../headerfooter/adminhome.php";
 ?> 
 <div class="jumbotron">
     <div class="container">
@@ -16,7 +16,7 @@ include "../headerfooter/header.php";
         </thead>
         <tbody>
 <?php
-require_once 'Database.php';
+require_once '../model/Database.php';
 require_once 'faq.php';
 
 
@@ -36,5 +36,5 @@ echo  "<tr>
 </tbody>
 </table>
 <?php
-include "../headerfooter/footer.php";
+include "../headerfooter/adminfooter.html";
 ?> 

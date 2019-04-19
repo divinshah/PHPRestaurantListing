@@ -40,7 +40,7 @@ textarea {
 }
 </style>
 <?php
-require_once 'Database.php';
+require_once '../model/Database.php';
 require_once 'faq.php';
 	
 if(isset($_GET['id'])){
@@ -68,7 +68,7 @@ if(isset($_POST['updfaq'])){
 }
 ?>
 <?php
-include "../headerfooter/header.php";
+include "../headerfooter/adminhome.php";
 ?> 
 <div class="jumbotron">
     <div class="container">
@@ -84,5 +84,5 @@ include "../headerfooter/header.php";
 </form>
 </div>
 <?php
-include "../headerfooter/footer.php";
+include "../headerfooter/adminfooter.html";
 ?>

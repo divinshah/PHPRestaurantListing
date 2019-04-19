@@ -65,7 +65,7 @@ include "../headerfooter/header.php";
 
 
 <?php
-require_once 'Database.php';
+require_once '../model/Database.php';
 require_once 'faq.php';
 
 $dbcon = Database::getDb();
