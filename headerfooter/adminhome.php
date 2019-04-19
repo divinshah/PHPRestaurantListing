@@ -51,19 +51,19 @@ $db = Database::getDb();
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
-          <a class="nav-link" href="admin-dashboard.php">
+          <a class="nav-link" href="../Admin-Panel/admin-dashboard.php">
             <i class="fa fa-fw fa-dashboard"></i>
             <span class="nav-link-text">Dashboard</span>
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
-          <a class="nav-link" href="list-user.php">
+          <a class="nav-link" href="../User-Panel/list-user.php">
             <i class="fa fa-fw fa-area-chart"></i>
             <span class="nav-link-text">Users</span>
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
-          <a class="nav-link" href="list-admin.php">
+          <a class="nav-link" href="../Admin-Panel/list-admin.php">
             <i class="fa fa-fw fa-table"></i>
             <span class="nav-link-text">Admin</span>
           </a>

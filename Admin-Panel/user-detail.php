@@ -1,6 +1,3 @@
-<?php
-require_once '../headerfooter/user_header.php';
-?>
 
 <?php
 require_once '../model/Database.php';
@@ -21,12 +18,14 @@ if(isset($_POST['Edit']))
     header("Location: edit-user.php?id=$id");
 }
 ?>
-<div class="jumbotron">
-    <div class="container">
-        <h1>My Profile</h1>
-    </div>
-</div>
+<?php
+require_once '../headerfooter/adminhome.php';
+?>
+
 <div class="container">    
+        <div class="card-header">
+          <i class="fa fa-table"></i> User Panel
+        </div>
         <form action="" method="post">
             <div class="form-group">
                 <input name="id" class="form-control" value="<?= $user->id; ?>" type="hidden" />
@@ -60,5 +59,5 @@ if(isset($_POST['Edit']))
 
 
 <?php
-require_once '../headerfooter/user_footer.php'
+require_once '../headerfooter/adminfooter.html';
 ?>

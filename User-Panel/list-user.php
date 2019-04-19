@@ -1,5 +1,5 @@
 <?php
-require_once 'adminhome.php';
+require_once '../headerfooter/adminhome.php';
 ?>
 
 <div class="card mb-3">
@@ -34,8 +34,8 @@ require_once 'adminhome.php';
         </thead>
         <tbody>
             <?php
-            require_once 'Database.php';
-            require_once 'User.php';
+            require_once '../model/Database.php';
+            require_once '../model/User.php';
             $db = Database :: getDB();
             $u = new User();
             
@@ -65,13 +65,13 @@ require_once 'adminhome.php';
             {
                 echo "<tr>
                 <td hidden>  $user->id  </td>
-                <td> <a href='user-detail.php?id=$user->id'>  $user->full_name </a> </td>
+                <td> <a href='../Admin-Panel/user-detail.php?id=$user->id'>  $user->full_name </a> </td>
                 <td>  $user->email_id  </td>
                 <td>  $user->mobile_no  </td>
                 <td>  $user->address  </td>
-                <td> <a href='edit-user.php?id=$user->id' name='edituser' class='btn btn-primary btn-block'> Edit </a> </td>
+                <td> <a href='../Admin-Panel/edit-user.php?id=$user->id' name='edituser' class='btn btn-primary btn-block'> Edit </a> </td>
                 
-                <td> <a href='delete-user.php?id=$user->id' name='deleteuser' class='btn btn-primary btn-block'> Delete </a> </td>
+                <td> <a href='../Admin-Panel/delete-user.php?id=$user->id' name='deleteuser' class='btn btn-primary btn-block'> Delete </a> </td>
                 </tr>
                 ";   
             }
@@ -83,6 +83,6 @@ require_once 'adminhome.php';
 </div>
 </div>
 <?php
-require_once 'adminfooter.html';
+require_once '../headerfooter/adminfooter.html';
 ?>
 <!--<td> <button type='submit' name='regiuser' class='btn btn-primary btn-block'> Edit </button> </td>-->

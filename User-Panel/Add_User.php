@@ -1,8 +1,8 @@
 <!--Php code-->
 <?php
-require_once 'header.php';
-require_once 'Database.php';
-require_once 'User.php';
+require_once '../headerfooter/header.php';
+require_once '../model/Database.php';
+require_once '../model/User.php';
 
 $db = Database :: getDB();
 $u = new User();
@@ -72,5 +72,5 @@ if(isset($_POST['regiuser']))
 </div>
 
 <?php
-require_once 'footer.php';
+require_once '../headerfooter/footer.php';
 ?>

@@ -1,5 +1,5 @@
 <?php
-require_once '../headerfooter/user_header.php';
+
 require_once '../model/Database.php';
 require_once '../model/User.php';
 require_once '../model/Admin.php';
@@ -46,20 +46,21 @@ if(isset($_POST['Edit']))
     $count = $u -> updateUser($id,$fname,$email,$mobile,$addr,$pcode,$dbcon);
 
     if($count) {
-        header("Location: user-detail.php?id=$id");
+        header("Location: ../User-Panel/list-user.php");
     } else {
         echo "problem updating";
     }
     
 }
 ?>
-<div class="jumbotron">
-    <div class="container">
-        <h1>Edit Profile</h1>
-    </div>
-</div>
-
+<?php
+require_once '../headerfooter/adminhome.php';
+?>
 <div class="container">
+    <div class="card-header">
+          <i class="fa fa-table"></i> User Detail
+        </div>
+        
         <form action="" method="post">
             <div class="form-group">
                 <input name="id" class="form-control" value="<?= $user->id; ?>" type="hidden" />
@@ -93,5 +94,5 @@ if(isset($_POST['Edit']))
 </div>
 
 <?php
-require_once '../headerfooter/user_footer.php';
+require_once '../headerfooter/adminfooter.html';
 ?>

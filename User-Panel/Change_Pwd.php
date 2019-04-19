@@ -1,8 +1,8 @@
 <!--Php code-->
 <?php
-require_once 'user_header.php';
-require_once 'Database.php';
-require_once 'User.php';
+
+require_once '../model/Database.php';
+require_once '../model/User.php';
 
 $db = Database :: getDB();
 $u = new User();
@@ -44,7 +44,9 @@ if(isset($_POST['savepwd']))
 
 
 ?>
-
+<?php
+require_once '../headerfooter/user_header.php';
+?>
 <div class="jumbotron">
     <div class="container">
         <h1>Change Password</h1>
@@ -71,5 +73,5 @@ if(isset($_POST['savepwd']))
 </div>
 
 <?php
-require_once 'user_footer.php';
+require_once '../headerfooter/user_footer.php';
 ?>

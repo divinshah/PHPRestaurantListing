@@ -53,7 +53,7 @@
             padding-top: 50px;
         }
         .footer{
-        background-image: url("images/footer1.jpg");
+        background-image: url("../images/footer1.jpg");
         padding: 30px 0px 30px 0px;
         margin-top: 40px;
         }
@@ -64,8 +64,8 @@
 <body>
 
     <?php
-    require_once 'Database.php';
-    require_once 'User.php';
+    require_once '../model/Database.php';
+    require_once '../model/User.php';
     $db = Database::getDb();
     
     $u = new User();
@@ -99,19 +99,19 @@
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
-        <a class="nav-link" href="user-detail.php?id=<?= $id; ?>">Profile</a>
+        <a class="nav-link" href="../User-Panel/user-detail.php?id=<?= $id; ?>">Profile</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Feedback</a>
+        <a class="nav-link" href="../feedback-ridham/addfeedback.php">Feedback</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="Change_Pwd.php?id=<?= $id; ?>">Change Password</a>
+        <a class="nav-link" href="../User-Panel/Change_Pwd.php?id=<?= $id; ?>">Change Password</a>
       </li>  
       <li class="nav-item">
         <a class="nav-link" href="#"><button type="button" class="btn btn-outline-light">My Business</button></a>
       </li>
       <li class="nav-item">         
-        <a class="nav-link" href="Logout.php?id=<?= $id; ?>">Logout</a>
+        <a class="nav-link" href="../User-Panel/Logout.php?id=<?= $id; ?>">Logout</a>
       </li>
     </ul>
   </div>  
