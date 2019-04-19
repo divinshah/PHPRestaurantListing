@@ -47,7 +47,7 @@
 </nav>
 <div class="jumbotron">
 <div class="containerH">
-  <h1>Businesses</h1> 
+  <h1>Offers</h1> 
     </div>
 </div>
 

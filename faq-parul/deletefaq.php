@@ -2,8 +2,8 @@
 require_once 'Database.php';
 require_once 'faq.php';
 
-if(isset($_POST['delete'])){
-    $id= $_POST['id'];
+if(isset($_GET['id'])){
+    $id= $_GET['id'];
     $dbcon = Database::getDb();
     $s = new faq();
     $count = $s->deleteFaq($id, $dbcon);

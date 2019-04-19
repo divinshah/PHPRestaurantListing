@@ -58,13 +58,14 @@ if(isset($_POST['AddQuestion']))
 	$count = $s->addfaq($question, $answer, $db);
 	
 	if($count){
-		echo "Question Added Successfully";
+		header("location: listfaq.php");
 	}
 	else {
 		echo "Problem adding question";
 	}
 }
 ?>
+
 <div class="container">
 <form action="" method="post">
 <div class="form-group">
@@ -78,7 +79,6 @@ if(isset($_POST['AddQuestion']))
 	<div class="form-group">
 	<input type="submit" class="button" name="AddQuestion" value="ADD" /></div>
 </form>
-</div>
 <?php
 include "footer.php";
 ?> 
