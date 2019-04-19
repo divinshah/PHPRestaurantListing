@@ -59,7 +59,7 @@ if(isset($_POST['AddOffer']))
 	$count = $s->addOffer($offername, $offerdescrp,$offervalid,$offerprice, $db);
 	
 	if($count){
-		echo "Offer Added Successfully";
+		header("Location: listoffer.php");
 	}
 	else {
 		echo "Problem adding offer";

@@ -1,6 +1,10 @@
 <?php
 include "header.php";
 ?>
+<div class="container">
+    <!--<h2>Get Started with free account</h2>-->
+    <form action="" method="post">
+
 <?php
 require_once 'Database.php';
 require_once 'offers.php';
@@ -12,14 +16,21 @@ $myfaq =  $s->getAllOffers(Database::getDb());
 
 
 foreach($myfaq as $faq){
-   echo " <ul> Offer Name: $faq->offerName  </ul>
-          <ul> Description: $faq->offerDesc </ul>
-		   <ul> Validity: $faq->offerValidity </ul>
-		    <ul> Price: $faq->offerPrice </ul>
+   echo "<div class='form-group'>
+            <label>Offer Name:</label><input class='form-control' name='oid' value='$faq->offerName' readonly/></div>
+   <div class ='form-group'>	
+   <label>Offer Description:</label><input class='form-control' name='oid' value='$faq->offerDesc' readonly/></div>
+   <div class ='form-group'>
+   <label>Offer Validity:</label><input class='form-control' name='oid' value='$faq->offerValidity' readonly/></div>
+   <div class ='form-group'>
+   <label>Offer Price:</label><input class='form-control' name='oid' value='$faq->offerPrice' readonly/></div>
+   
 		  ";
    
 }
 ?>
+</form>
+</div>
 <?php
 include "footer.php";
 ?>

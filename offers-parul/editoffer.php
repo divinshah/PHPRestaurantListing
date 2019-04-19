@@ -44,12 +44,12 @@ textarea {
 <?php
 require_once 'Database.php';
 require_once 'offers.php';
-	
-if(isset($_POST['update'])){
-	$id = $_POST['id'];
-	
 	$dbcon = Database::getDb();
     $s = new offers();
+if(isset($_GET['id'])){
+	$id = $_GET['id'];
+	
+	
 	//echo "hi";
     $faq = $s->getOfferById($id, $dbcon);
     //var_dump($faq);

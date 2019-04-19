@@ -47,6 +47,18 @@ a:active {
   color: blue;
 }
 </style>
+<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+        <thead>
+            <tr>
+                <th hidden>Id</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Validity</th>
+				<th>Price</th>
+                <th colspan="2"></th>
+            </tr>
+        </thead>
+        <tbody>
 <?php
 require_once 'Database.php';
 require_once 'offers.php';
@@ -58,20 +70,20 @@ $myoffer =  $s->getAllOffers(Database::getDb());
 
 
 foreach($myoffer as $offer){
-    echo "<li><a href='offerDetail.php?id=$offer->offerId'>" .  $offer->offerName  . "</a>".
-	    "<div class='container'>".
-        "<form action='editoffer.php' method='post'>" .
-        "<input type='hidden' class='form-control' value='$offer->offerId' name='id' />".
-        "<input type='submit' class='btn2 btn-primary btn-list' value='Update' name='update' />".
-        "</form>" .
-        "<form action='deleteoffer.php' method='post'>" .
-        "<input type='hidden' class='form-control' value='$offer->offerId' name='id' />".
-        "<input type='submit' class='btn2 btn-primary btn-list' value='Delete' name='delete' />".
-        "</form>".
-		"</div>".
-        "</li>";
+    echo "<tr>
+	<td hidden> $offer->offerId </td>
+	<td> <a href = 'offerDetail.php?id=$offer->offerId'>
+	$offer->offerName </a> </td>
+	<td>  $offer->offerDesc  </td>
+    <td>  $offer->offerValidity  </td>
+	<td>  $offer->offerPrice  </td>
+    <td> <a href='editoffer.php?id=$offer->offerId' name='update' class='btn btn-primary btn-block'> Edit </a> </td>
+    <td> <a href='deleteoffer.php?id=$offer->offerId' name='delete' class='btn btn-primary btn-block'> Delete </a> </td>
+    </tr>";   
 }
 ?>
+</tbody>
+</table>
 <?php
 include "footer.php";
 ?> 
