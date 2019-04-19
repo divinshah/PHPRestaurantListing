@@ -39,6 +39,8 @@ require_once 'adminhome.php';
             $db = Database :: getDB();
             $u = new User();
             
+//            echo $_SESSION['email'];
+
             //$myuser = $u -> getAllUser($db);
             
             if(isset($_POST['search']))
@@ -55,7 +57,8 @@ require_once 'adminhome.php';
             }
             else 
             {
-              $myuser = $u -> getAllUser($db);  
+                $_SESSION['email'];
+                $myuser = $u -> getAllUser($db);  
             }
             
             foreach($myuser as $user)

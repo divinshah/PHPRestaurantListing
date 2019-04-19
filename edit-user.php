@@ -2,9 +2,27 @@
 require_once 'user_header.php';
 require_once 'Database.php';
 require_once 'User.php';
+require_once 'Admin.php';
 
-//session_start();
-//echo $_SESSION['email'];
+/*
+if(isset($_SESSION['email']))
+{
+    $email = $_SESSION['email'];
+    $dbcon = Database::getDb();
+    $a = new Admin();
+    $admin = $a->getUseridByEmail($email,$dbcon);
+    var_dump($admin);
+    
+    foreach($admin as $l)
+    {
+        $id = $l->role;
+    }
+    if($admin)
+    {
+        echo "Hi";
+    }
+}
+*/
 
 if(isset($_GET['id']))
 {
