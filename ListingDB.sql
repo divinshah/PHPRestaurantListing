@@ -31,7 +31,8 @@ SET time_zone = "+00:00";
 CREATE TABLE `admin_details` (
   `id` int(11) NOT NULL,
   `name` varchar(100) NOT NULL,
-  `role` varchar(100) NOT NULL,
+  `emailid` varchar(100) NOT NULL,
+  `role` int(100) NOT NULL,
   `password` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -39,9 +40,9 @@ CREATE TABLE `admin_details` (
 -- Dumping data for table `admin_details`
 --
 
-INSERT INTO `admin_details` (`id`, `name`, `role`, `password`) VALUES
-(1, 'Anjali', 'Manager', 'Anji'),
-(2, 'Urvi', 'Employee', 'Urvi');
+INSERT INTO `admin_details` (`id`, `name`, `emailid`, `role`, `password`) VALUES
+(3, 'Anjali', 'anjali@gmail.com', 1, 'abc'),
+(4, 'Admin', 'admin@admin.com', 1, 'admin');
 
 -- --------------------------------------------------------
 
