@@ -39,7 +39,7 @@ textarea {
 }
 </style>
 <?php
-require_once 'Database.php';
+require_once '../model/Database.php';
 require_once 'offers.php';
 	$dbcon = Database::getDb();
     $s = new offers();
@@ -73,7 +73,7 @@ if(isset($_POST['updoffer'])){
 }
 ?>
 <?php
-include "../headerfooter/header.php";
+include "../headerfooter/adminhome.php";
 ?> 
 
 <div class="jumbotron">
@@ -92,5 +92,5 @@ include "../headerfooter/header.php";
 </form>
 </div>
 <?php
-include "../headerfooter/footer.php";
+include "../headerfooter/adminfooter.html";
 ?>

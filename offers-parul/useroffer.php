@@ -20,7 +20,7 @@ include "../headerfooter/header.php";
         <tbody>
 
 <?php
-require_once 'Database.php';
+require_once '../model/Database.php';
 require_once 'offers.php';
 
 $dbcon = Database::getDb();

@@ -1,5 +1,5 @@
 <?php
-include "../headerfooter/header.php";
+include "../headerfooter/adminhome.php";
 ?> 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -65,7 +65,7 @@ a:active {
         </thead>
         <tbody>
 <?php
-require_once 'Database.php';
+require_once '../model/Database.php';
 require_once 'offers.php';
 
 $dbcon = Database::getDb();
@@ -90,5 +90,5 @@ foreach($myoffer as $offer){
 </tbody>
 </table>
 <?php
-include "../headerfooter/footer.php";
+include "../headerfooter/adminfooter.html";
 ?> 
