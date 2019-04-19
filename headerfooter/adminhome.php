@@ -1,6 +1,6 @@
 <?php
-require_once 'Database.php';
-require_once 'Admin.php';
+require_once '../model/Database.php';
+require_once '../model/Admin.php';
 $db = Database::getDb();    
     $u = new Admin();
     session_start();
@@ -33,12 +33,12 @@ $db = Database::getDb();
   <meta name="author" content="">
   <title>TO</title>
   <!-- Bootstrap core CSS-->
-  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
   <!-- Custom fonts for this template-->
-  <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css">
       <link href="css/dataTables.bootstrap4.css" rel="stylesheet">
   <!-- Custom styles for this template-->
-  <link href="css/sb-admin.css" rel="stylesheet">
+  <link href="../css/sb-admin.css" rel="stylesheet">
 </head>
 
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">

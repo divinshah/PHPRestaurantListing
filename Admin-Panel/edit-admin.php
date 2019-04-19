@@ -1,7 +1,7 @@
 
 <?php
-require_once 'Database.php';
-require_once 'Admin.php';
+require_once '../model/Database.php';
+require_once '../model/Admin.php';
 
 $dbcon = Database::getDb();
 $u = new Admin();
@@ -30,7 +30,7 @@ if(isset($_POST['regiadmin']))
 }
 ?>
 <?php
-require_once 'adminhome.php';
+require_once '../headerfooter/adminhome.php';
 ?>
 <div class="container">
     <div class="card-header">
@@ -68,5 +68,5 @@ require_once 'adminhome.php';
     </form>
 </div>
 <?php
-require_once 'adminfooter.html';
+require_once '../headerfooter/adminfooter.html';
 ?>

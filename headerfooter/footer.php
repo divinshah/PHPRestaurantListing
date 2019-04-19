@@ -29,24 +29,24 @@
         </ul>
       </div>
     </div>
-    <div class="col-sm-4"><a href="https://www.facebook.com/"><img src="images/facebook-logo.png" height="40px" alt="facebook"></a>&nbsp &nbsp<a href="https://www.instagram.com/"><img src="images/instagram-logo.png" class="float" height="40px" alt="instagram"></a></div>
+    <div class="col-sm-4"><a href="https://www.facebook.com/"><img src="../images/facebook-logo.png" height="40px" alt="facebook"></a>&nbsp &nbsp<a href="https://www.instagram.com/"><img src="../images/instagram-logo.png" class="float" height="40px" alt="instagram"></a></div>
       
     </div>
   </div>
 </div>
 </div>
-  <script src="lib/jquery/jquery.min.js"></script>
-  <script src="lib/jquery/jquery-migrate.min.js"></script>
-  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="lib/easing/easing.min.js"></script>
-  <script src="lib/mobile-nav/mobile-nav.js"></script>
-  <script src="lib/wow/wow.min.js"></script>
-  <script src="lib/waypoints/waypoints.min.js"></script>
-  <script src="lib/counterup/counterup.min.js"></script>
-  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-  <script src="lib/isotope/isotope.pkgd.min.js"></script>
-  <script src="lib/lightbox/js/lightbox.min.js"></script>
-  <script src="contactform/contactform.js"></script>
-  <script src="js/main.js"></script>
+  <script src="../lib/jquery/jquery.min.js"></script>
+  <script src="../lib/jquery/jquery-migrate.min.js"></script>
+  <script src="../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../lib/easing/easing.min.js"></script>
+  <script src="../lib/mobile-nav/mobile-nav.js"></script>
+  <script src="../lib/wow/wow.min.js"></script>
+  <script src="../lib/waypoints/waypoints.min.js"></script>
+  <script src="../lib/counterup/counterup.min.js"></script>
+  <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="../lib/isotope/isotope.pkgd.min.js"></script>
+  <script src="../lib/lightbox/js/lightbox.min.js"></script>
+  <script src="../contactform/contactform.js"></script>
+  <script src="../js/main.js"></script>
 </body>
 </html>

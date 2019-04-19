@@ -1,6 +1,6 @@
 <?php
-require_once 'Database.php';
-require_once 'Admin.php';
+require_once '../model/Database.php';
+require_once '../model/Admin.php';
 
 
 if(isset($_GET['id']))

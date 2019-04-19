@@ -1,7 +1,7 @@
 <?php
-require_once 'adminhome.php';
-require_once 'Database.php';
-require_once 'Dashboard.php';
+require_once '../headerfooter/adminhome.php';
+require_once '../model/Database.php';
+require_once '../model/Dashboard.php';
 
 $db = Database::getDB();
 $d = new Dashboard();
@@ -88,5 +88,5 @@ $offer = $d->getOfferCount($db);
     </div>
 
 <?php
-require_once 'adminfooter.html';
+require_once '../headerfooter/adminfooter.html';
 ?>

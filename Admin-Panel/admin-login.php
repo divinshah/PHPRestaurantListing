@@ -1,8 +1,8 @@
 <!--Php code-->
 <?php
-require_once 'header.php';
-require_once 'Database.php';
-require_once 'Admin.php';
+
+require_once '../model/Database.php';
+require_once '../model/Admin.php';
 
 $db = Database :: getDB();
 $u = new Admin();
@@ -32,7 +32,9 @@ if(isset($_POST['login']))
 }
 
 ?>
-
+<?php
+require_once '../headerfooter/header.php';
+?>
 <div class="jumbotron">
     <div class="container">
         <h1>Login</h1>
@@ -54,5 +56,5 @@ if(isset($_POST['login']))
     </form>
 </div>
 <?php
-require_once 'footer.php';
+require_once '../headerfooter/footer.php';
 ?>
