@@ -1,6 +1,11 @@
 <?php
-include "header.php";
+include "../headerfooter/header.php";
 ?> 
+<div class="jumbotron">
+    <div class="container">
+        <h1>Frequently Asked Questions</h1>
+    </div>
+</div>
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 
 <script>
@@ -83,5 +88,5 @@ foreach($myfaq as $faq){
 }
 ?>
 <?php
-include "footer.php";
+include "../headerfooter/footer.php";
 ?>

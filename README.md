@@ -35,3 +35,26 @@ List of files-
 Features: Parul Gupta
 1.FAQs - Add, Edit, Delete, List, faq, detail
 2. Offers- Add, Edit, Delete, List, faq, detail
+3. Contact Us: Insert, List, Detail
+Files:
+1. addfaq.php
+2. Database.php
+3. deletefaq.php
+4. editfaq.php
+5. faq.php
+6. faqDetail.php
+7. faqUser.php
+8. listfaq.php
+9. header.php
+10. footer.php
+11. addoffer.php
+12. deleteoffer.php
+13. editoffer.php
+14. listoffer.php
+15. offerDetail.php
+16. offers.php
+17. useroffer.php
+18. Contact.php
+19. contactDetail.php
+20. InsertContact.php
+21. listContact.php

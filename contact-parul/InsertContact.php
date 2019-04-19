@@ -16,7 +16,7 @@ if(isset($_POST['SendMessage']))
 		echo "Message Sent Successfully..!!";
 	}
 	else {
-		echo "Sorry..!! Please Check your fiels once";
+		echo "Sorry..!! Please Check your fiedls once";
 	}
 }
 ?>

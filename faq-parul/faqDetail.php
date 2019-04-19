@@ -1,7 +1,11 @@
-
 <?php
-include "header.php";
+include "../headerfooter/header.php";
 ?> 
+<div class="jumbotron">
+    <div class="container">
+        <h1>Frequently Asked Questions</h1>
+    </div>
+</div>
 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
         <thead>
             <tr>
@@ -32,5 +36,5 @@ echo  "<tr>
 </tbody>
 </table>
 <?php
-include "footer.php";
+include "../headerfooter/footer.php";
 ?> 

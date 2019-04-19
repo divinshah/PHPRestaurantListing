@@ -1,5 +1,5 @@
 <?php
-include "header.php";
+include "../headerfooter/header.php";
 ?> 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -47,6 +47,11 @@ a:active {
   color: blue;
 }
 </style>
+<div class="jumbotron">
+    <div class="container">
+        <h1>Offers</h1>
+    </div>
+</div>
 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
         <thead>
             <tr>
@@ -85,5 +90,5 @@ foreach($myoffer as $offer){
 </tbody>
 </table>
 <?php
-include "footer.php";
+include "../headerfooter/footer.php";
 ?> 

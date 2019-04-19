@@ -1,9 +1,23 @@
 <?php
-include "header.php";
+include "../headerfooter/header.php";
 ?>
-<div class="container">
-    <!--<h2>Get Started with free account</h2>-->
-    <form action="" method="post">
+<div class="jumbotron">
+    <div class="container">
+        <h1>Offers</h1>
+    </div>
+</div>
+<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+        <thead>
+            <tr>
+                <th hidden>Id</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Validity</th>
+				<th>Price</th>
+                <th colspan="2"></th>
+            </tr>
+        </thead>
+        <tbody>
 
 <?php
 require_once 'Database.php';
@@ -16,21 +30,17 @@ $myfaq =  $s->getAllOffers(Database::getDb());
 
 
 foreach($myfaq as $faq){
-   echo "<div class='form-group'>
-            <label>Offer Name:</label><input class='form-control' name='oid' value='$faq->offerName' readonly/></div>
-   <div class ='form-group'>	
-   <label>Offer Description:</label><input class='form-control' name='oid' value='$faq->offerDesc' readonly/></div>
-   <div class ='form-group'>
-   <label>Offer Validity:</label><input class='form-control' name='oid' value='$faq->offerValidity' readonly/></div>
-   <div class ='form-group'>
-   <label>Offer Price:</label><input class='form-control' name='oid' value='$faq->offerPrice' readonly/></div>
-   
-		  ";
+   echo "<tr>
+   <td>   $faq->offerName  </td>
+   <td>   $faq->offerDesc  </td>
+    <td>  $faq->offerValidity  </td>
+	<td>  $faq->offerPrice  </td>
+   </tr>";
    
 }
 ?>
-</form>
-</div>
+</tbody>
+</table>
 <?php
-include "footer.php";
+include "../headerfooter/footer.php";
 ?>
