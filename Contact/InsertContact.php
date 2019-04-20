@@ -1,5 +1,5 @@
 <?php
-require_once 'Database.php';
+require_once '../model/Database.php';
 require_once 'Contact.php';
 
 	$db = Database::getDb();
@@ -20,6 +20,7 @@ if(isset($_POST['SendMessage']))
 	}
 }
 ?>
+
 <div class="container">
 <form action="" method="post">
 <div class="form-group">

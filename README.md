@@ -6,6 +6,25 @@ database.php, customerror.php
 2. Gallery- addnew.php, delete_image.php, displayimages.php, dbconfig.php, index.php
 3. Comments on the listing- post_comments.php, deleteComment.php, delete.php
 
+Home.php
+Header.php
+Footer.php
+Gallery/Displayimages.php
+Gallery/addnew.php
+Gallery/index.php
+Gallery/delete_image.php
+Listing/addlisting.php
+Listing/customerror.php
+Listing/database.php
+Listing/delete.php
+Listing/deletecomment.php
+Listing/getlisting.php
+Listing/listings.php
+Listing/postcomments.php
+Listing/updatelisting.php
+Listing/viewlistings.php
+
+
 Features: Anjali Panchal
 1. User Panel - Register, Login, Update, Delete , List , Details, Change Password
 2. Admin Panel - Add, Update, Delete , List , Details
@@ -58,3 +77,48 @@ Files:
 19. contactDetail.php
 20. InsertContact.php
 21. listContact.php
+
+Urvisha Patel:
+1.Events/addevent.php
+2.Events/customerror.php
+3.Events/deleteevent.php
+4.Events/eventdetail.php
+5.Events/file_util.php
+6.Events/index.php
+7.Events/listevent.php
+8.Events/listevents.php
+9.Events/update_event.php
+10.Events/event.php
+11.Events/database.php
+12.Newsletter/addnewsletter.php
+13.Newsletter/deletenewsletter.php
+14.Newsletter/list_newsletter.php
+15.Newsletter/newsletterdetail.php
+16.Newsletter/updatenewsletter.php
+17.Searchbylocation/connection2.php
+
+Ridham Passey:
+1.Blog/addblog.php
+2.Blog/Blog.php
+3.Blog/database.php
+4.Blog/deleteblog.php
+5.Blog/detailblog.php
+6.Blog/editblog.php
+7.Blog/listblog.php
+8.Blog/userblog.php
+9.Feedback/addfeedback.php
+10.Feedback/database.php
+11.Feedback/deletefeedback.php
+12.Feedback/detailfeedback.php
+13.Feedback/editfeedback.php
+14.Feedback/feedback.php
+15.Feedback/listfeedback.php
+16.Giftcard/giftdatabase.php
+17.Giftcard/addgift.php
+18.Giftcard/deletegift.php
+19.Giftcard/detailgift.php
+20.Giftcard/editgift.php
+21.Giftcard/giftcard.php
+22.Giftcard/usergift.php
+23.Giftcard/listgift.php
+
