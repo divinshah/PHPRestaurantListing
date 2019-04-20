@@ -59,5 +59,5 @@ if(isset($_POST['regiuser']))
 </div>
 
 <?php
-require_once '../adminfooter.html';
+require_once '../headerfooter/adminfooter.html';
 ?>

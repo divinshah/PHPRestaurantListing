@@ -69,37 +69,80 @@ $db = Database::getDb();
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
-          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
+          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="../FAQ/listfaq.php" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-wrench"></i>
-            <span class="nav-link-text">Components</span>
+            <span class="nav-link-text">FAQ</span>
           </a>
-          <ul class="sidenav-second-level collapse" id="collapseComponents">
+          <!--<ul class="sidenav-second-level collapse" id="collapseComponents">
             <li>
               <a href="#">Navbar</a>
             </li>
             <li>
               <a href="#">Cards</a>
             </li>
-          </ul>
+          </ul>-->
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
-          <a class="nav-link" data-toggle="collapse" href="#collapseExamplePages" data-parent="#exampleAccordion">
+          <a class="nav-link" data-toggle="collapse" href="../Offers/listoffer.php" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-file"></i>
-            <span class="nav-link-text">Example Pages</span>
+            <span class="nav-link-text">offers</span>
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
-          <a class="nav-link" data-toggle="collapse" href="#collapseMulti" data-parent="#exampleAccordion">
+          <a class="nav-link" data-toggle="collapse" href="../Contact/listContact.php" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-sitemap"></i>
-            <span class="nav-link-text">Menu Levels</span>
+            <span class="nav-link-text">Contact Us</span>
           </a>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
-          <a class="nav-link" href="#">
+          <a class="nav-link" href="../Newsletter-urvisha/List_newsletter.php">
             <i class="fa fa-fw fa-link"></i>
-            <span class="nav-link-text">Link</span>
+            <span class="nav-link-text">Newsletter</span>
           </a>
         </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
+          <a class="nav-link" href="../events-urvisha/listevents.php">
+            <i class="fa fa-fw fa-link"></i>
+            <span class="nav-link-text">Events</span>
+          </a>
+        </li>
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
+          <a class="nav-link" href="../feedback-ridham/listfeedback.php">
+            <i class="fa fa-fw fa-link"></i>
+            <span class="nav-link-text">Feedback</span>
+          </a>
+        </li>
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
+          <a class="nav-link" href="../Blog/listblog.php">
+            <i class="fa fa-fw fa-link"></i>
+            <span class="nav-link-text">Blog</span>
+          </a>
+        </li>
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
+          <a class="nav-link" href="../Giftcard/listgift.php">
+            <i class="fa fa-fw fa-link"></i>
+            <span class="nav-link-text">Giftcard</span>
+          </a>
+        </li>
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
+          <a class="nav-link" href="../">
+            <i class="fa fa-fw fa-link"></i>
+            <span class="nav-link-text">Business</span>
+          </a>
+        </li>
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
+          <a class="nav-link" href="../">
+            <i class="fa fa-fw fa-link"></i>
+            <span class="nav-link-text">Gallery</span>
+          </a>
+        </li>
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
+          <a class="nav-link" href="../">
+            <i class="fa fa-fw fa-link"></i>
+            <span class="nav-link-text">Comments</span>
+          </a>
+        </li>
+
       </ul>
       <ul class="navbar-nav sidenav-toggler">
         <li class="nav-item">
