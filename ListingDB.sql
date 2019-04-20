@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 14, 2019 at 04:22 PM
+-- Generation Time: Apr 20, 2019 at 05:32 AM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.0
 
@@ -31,33 +31,40 @@ SET time_zone = "+00:00";
 CREATE TABLE `admin_details` (
   `id` int(11) NOT NULL,
   `name` varchar(100) NOT NULL,
-  `emailid` varchar(100) NOT NULL,
-  `role` int(100) NOT NULL,
+  `role` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
 
 --
 -- Dumping data for table `admin_details`
 --
 
-INSERT INTO `admin_details` (`id`, `name`, `emailid`, `role`, `password`) VALUES
-(3, 'Anjali', 'anjali@gmail.com', 1, 'abc'),
-(4, 'Admin', 'admin@admin.com', 1, 'admin');
+INSERT INTO `admin_details` (`id`, `name`, `role`, `password`) VALUES
+(1, 'Anjali', 'Manager', 'Anji'),
+(2, 'Urvi', 'Employee', 'Urvi');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `blog`
+-- Table structure for table `blogs`
 --
 
-CREATE TABLE `blog` (
+CREATE TABLE `blogs` (
   `id` int(11) NOT NULL,
-  `Title` varchar(50) NOT NULL,
-  `Content` varchar(5000) NOT NULL,
-  `authName` varchar(50) NOT NULL,
-  `publishDate` datetime NOT NULL
+  `name` varchar(30) NOT NULL,
+  `time` datetime NOT NULL,
+  `date` datetime NOT NULL,
+  `blog` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `blogs`
+--
+
+INSERT INTO `blogs` (`id`, `name`, `time`, `date`, `blog`) VALUES
+(1, 'dsjk', '2012-00-00 00:00:00', '2019-02-23 00:00:00', 'mnc'),
+(2, ',jknljk', '0000-00-00 00:00:00', '2019-02-23 00:00:00', 'SFDGYHUJIKOTRFGHUJNKLGHBJK'),
+(3, 'ridham', '0000-00-00 00:00:00', '2019-02-23 00:00:00', 'rifhjxdncncnn');
 
 -- --------------------------------------------------------
 
@@ -86,6 +93,26 @@ INSERT INTO `businesses` (`ID`, `listing_name`, `listing_category`, `listing_cit
 (3, 'Kismat', 'restaurant', 'Toronto', '9998761232', 'kis@ks.com', 0, 0),
 (4, 'Madras Hut', 'restaurant', 'Toronto', 'xxxxxxxx', 'madras@gmail.com', 0, 0),
 (9, 'honest', 'Italian', 'Toronto', '2313423423', 'divyashah9724330544@gmail.com', 0, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cities`
+--
+
+CREATE TABLE `cities` (
+  `cityId` int(11) NOT NULL,
+  `cityName` varchar(100) NOT NULL,
+  `isVisible` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `cities`
+--
+
+INSERT INTO `cities` (`cityId`, `cityName`, `isVisible`) VALUES
+(1, 'Toronto', 1),
+(2, 'Brampton', 0);
 
 -- --------------------------------------------------------
 
@@ -119,94 +146,6 @@ INSERT INTO `comments` (`id`, `name`, `comment`, `post_time`, `listingid`) VALUE
 (29, 'vds', 'awcw', '2019-04-11 09:11:13', 2),
 (30, 'dwad', 'cedc', '2019-04-11 09:12:01', 3),
 (31, 'new', 'list3', '2019-04-11 10:17:12', 3);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `gallery`
---
-
-CREATE TABLE `gallery` (
-  `id` int(11) NOT NULL,
-  `name` varchar(20) NOT NULL,
-  `category` varchar(50) NOT NULL,
-  `image` varchar(200) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `gallery`
---
-
-INSERT INTO `gallery` (`id`, `name`, `category`, `image`) VALUES
-(1, 'nie', 'event', '388204.jpg'),
-(3, 'Toronto', 'Restaurant', '545313.jpg'),
-(6, 'test', 'Restaurant', '285157.jpg'),
-(7, 'dive', 'place', '120897.jpg');
-
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `businesses`
---
-ALTER TABLE `businesses`
-  ADD PRIMARY KEY (`ID`);
-
---
--- Indexes for table `comments`
---
-ALTER TABLE `comments`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `gallery`
---
-ALTER TABLE `gallery`
-  ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `businesses`
---
-ALTER TABLE `businesses`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
-
---
--- AUTO_INCREMENT for table `comments`
---
-ALTER TABLE `comments`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
-
---
--- AUTO_INCREMENT for table `gallery`
---
-ALTER TABLE `gallery`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
-COMMIT;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `cities`
---
-
-CREATE TABLE `cities` (
-  `cityId` int(11) NOT NULL,
-  `cityName` varchar(100) NOT NULL,
-  `isVisible` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `cities`
---
-
-INSERT INTO `cities` (`cityId`, `cityName`, `isVisible`) VALUES
-(1, 'Toronto', 1),
-(2, 'Brampton', 0);
 
 -- --------------------------------------------------------
 
@@ -270,6 +209,80 @@ CREATE TABLE `feedback` (
   `message` varchar(500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `feedback`
+--
+
+INSERT INTO `feedback` (`id`, `name`, `email`, `message`) VALUES
+(1, '', 'jkjl@gmail.com', 'gigi');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `gallery`
+--
+
+CREATE TABLE `gallery` (
+  `id` int(11) NOT NULL,
+  `name` varchar(20) NOT NULL,
+  `category` varchar(50) NOT NULL,
+  `image` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `gallery`
+--
+
+INSERT INTO `gallery` (`id`, `name`, `category`, `image`) VALUES
+(1, 'nie', 'event', '388204.jpg'),
+(3, 'Toronto', 'Restaurant', '545313.jpg'),
+(6, 'test', 'Restaurant', '285157.jpg'),
+(7, 'dive', 'place', '120897.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `giftcards`
+--
+
+CREATE TABLE `giftcards` (
+  `ID` int(11) NOT NULL,
+  `amount` int(11) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `giftto` varchar(50) NOT NULL,
+  `giftfrom` varchar(50) NOT NULL,
+  `message` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `giftcards`
+--
+
+INSERT INTO `giftcards` (`ID`, `amount`, `email`, `giftto`, `giftfrom`, `message`) VALUES
+(0, 50, 'ridham.passey@gmail.com', 'Parul', 'Ridham', 'yayaya');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `newsletter`
+--
+
+CREATE TABLE `newsletter` (
+  `newsletterid` int(11) NOT NULL,
+  `topic` varchar(500) NOT NULL,
+  `title` varchar(500) NOT NULL,
+  `message` varchar(1000) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `newsletter`
+--
+
+INSERT INTO `newsletter` (`newsletterid`, `topic`, `title`, `message`) VALUES
+(1, 'health', 'vaccination camp in toronto', ''),
+(2, 'event', 'new events in toronto', 'dfkgkrbkjanvjzn,jnaeg.'),
+(3, 'health', 'jdnfoierg', 'd,mvkrvkdnkfdfsnrijbnkkkmxksjinb');
+
 -- --------------------------------------------------------
 
 --
@@ -311,6 +324,25 @@ INSERT INTO `registration` (`id`, `full_name`, `email_id`, `password`, `mobile_n
 (5, 'Urvi Patel', 'urvi@gmail.com', 'urvi', 2147483647, 'HumberWood', 'm9v1b6', '18:14:21', 0),
 (6, 'urvi', 'urvi@gmail.com', 'urvi', 2147483647, 'HumberWood', 'M9V 1B6', '18:40:21', 0);
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `roles`
+--
+
+CREATE TABLE `roles` (
+  `id` int(11) NOT NULL,
+  `role_name` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `roles`
+--
+
+INSERT INTO `roles` (`id`, `role_name`) VALUES
+(1, 'Admin'),
+(3, 'Employee');
+
 --
 -- Indexes for dumped tables
 --
@@ -322,21 +354,28 @@ ALTER TABLE `admin_details`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `blog`
+-- Indexes for table `blogs`
 --
-ALTER TABLE `blog`
+ALTER TABLE `blogs`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `business`
+-- Indexes for table `businesses`
 --
-
+ALTER TABLE `businesses`
+  ADD PRIMARY KEY (`ID`);
 
 --
 -- Indexes for table `cities`
 --
 ALTER TABLE `cities`
   ADD PRIMARY KEY (`cityId`);
+
+--
+-- Indexes for table `comments`
+--
+ALTER TABLE `comments`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `contact`
@@ -363,6 +402,24 @@ ALTER TABLE `feedback`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `gallery`
+--
+ALTER TABLE `gallery`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `giftcards`
+--
+ALTER TABLE `giftcards`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- Indexes for table `newsletter`
+--
+ALTER TABLE `newsletter`
+  ADD PRIMARY KEY (`newsletterid`);
+
+--
 -- Indexes for table `offers`
 --
 ALTER TABLE `offers`
@@ -372,6 +429,12 @@ ALTER TABLE `offers`
 -- Indexes for table `registration`
 --
 ALTER TABLE `registration`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `roles`
+--
+ALTER TABLE `roles`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -385,16 +448,28 @@ ALTER TABLE `admin_details`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `blog`
+-- AUTO_INCREMENT for table `blogs`
 --
-ALTER TABLE `blog`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `blogs`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `businesses`
+--
+ALTER TABLE `businesses`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `cities`
 --
 ALTER TABLE `cities`
   MODIFY `cityId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `comments`
+--
+ALTER TABLE `comments`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT for table `contact`
@@ -418,7 +493,19 @@ ALTER TABLE `faq`
 -- AUTO_INCREMENT for table `feedback`
 --
 ALTER TABLE `feedback`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `gallery`
+--
+ALTER TABLE `gallery`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT for table `newsletter`
+--
+ALTER TABLE `newsletter`
+  MODIFY `newsletterid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `offers`
@@ -431,95 +518,12 @@ ALTER TABLE `offers`
 --
 ALTER TABLE `registration`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-COMMIT;
-
-CREATE TABLE `roles` (
-  `id` int(11) NOT NULL,
-  `role_name` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `roles`
---
-
-INSERT INTO `roles` (`id`, `role_name`) VALUES
-(1, 'Admin'),
-(3, 'Employee');
-
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `roles`
---
-ALTER TABLE `roles`
-  ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT for dumped tables
---
 
 --
 -- AUTO_INCREMENT for table `roles`
 --
 ALTER TABLE `roles`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-COMMIT;
-
-CREATE TABLE `newsletter` (
-  `newsletterid` int(11) NOT NULL,
-  `topic` varchar(500) NOT NULL,
-  `title` varchar(500) NOT NULL,
-  `message` varchar(1000) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `newsletter`
---
-
-INSERT INTO `newsletter` (`newsletterid`, `topic`, `title`, `message`) VALUES
-(1, 'health', 'vaccination camp in toronto', ''),
-(2, 'event', 'new events in toronto', 'dfkgkrbkjanvjzn,jnaeg.'),
-(3, 'health', 'jdnfoierg', 'd,mvkrvkdnkfdfsnrijbnkkkmxksjinb');
-
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `newsletter`
---
-ALTER TABLE `newsletter`
-  ADD PRIMARY KEY (`newsletterid`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `newsletter`
---
-ALTER TABLE `newsletter`
-  MODIFY `newsletterid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-COMMIT;
-
-CREATE TABLE `blogs` (
-  `ID` int(10) NOT NULL,
-  `name` varchar(50) NOT NULL,
-  `datetime` datetime NOT NULL,
-  `message` varchar(1000) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
-
-ALTER TABLE `blogs`
-  ADD PRIMARY KEY (`ID`);
-
---
--- AUTO_INCREMENT for table `blogs`
---
-ALTER TABLE `blogs`
-  MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
