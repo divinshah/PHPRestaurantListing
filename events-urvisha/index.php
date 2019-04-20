@@ -12,23 +12,25 @@ require_once './model/event.php';
 		//var_dump($myeve);
 		
 ?>
-<!--
+
+
 <div class="jumbotron">
 	<div class="container">
 		<h1>Upcoming Events in the City</h1>
 	</div>
 </div>
 
-php
+<?php
 
  foreach($myeve as $event){
 	
-	// echo "<li class='btn btn-info btn-lg'><a href='eventdetail.php?id=$event->eventId'>" .  $event->eventName  . "</a>". "</li>";
+	 echo "<li'><a href='eventdetail.php?id=$event->eventId'>" .  $event->eventName  . "</a>". "</br>"."</li>";
 		
-	echo "<div class='btn btn-info btn-lg'>" . $event->eventName . "</div>" ."</br>"."</br>";
+
 	
 }
- ?>
+?>
+ <!--
  
 		
 		foreach($myeve as $event){
@@ -44,28 +46,31 @@ php
 				    "</tr>".
 					"</table>";
 		}
---> 
+?>-->
+<!--
+<div id="fh5co-event" class="fh5co-bg" style="background-image:url(images/img_bg_3jpg);">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+					 <span>Upcoming Events</span>
+					<h2>Upcoming Events</h2>
+				</div>
+			</div> 
+			<div class="row">
+				<div class="display-t">
+					<div class="display-tc">
+						<div class="col-md-10 col-md-offset-1">
+							<div class="col-md-6 col-sm-6 text-center">
+								<div class="event-wrap animate-box">
 
-<?php
+
+php
 
 foreach($myeve as $event){
 	
 	
-	echo "<div id='fh5co-event' class='fh5co-bg' style='background-image:url(images/img_bg_3.jpg);'>".
-		"<div class='overlay'></div>".
-		"<div class='container'>".
-			"<div class='row'>".
-				"<div class='col-md-8 col-md-offset-2 text-center fh5co-heading animate-box'>".
-					 "<span>"."Upcoming Events"."</span>".
-					"<h2>Upcoming Events</h2>".
-				"</div>".
-			"</div>". 
-			"<div class='row'>".
-				"<div class='display-t'>".
-					"<div class='display-tc'>".
-						"<div class='col-md-10 col-md-offset-1'>".
-							"<div class='col-md-6 col-sm-6 text-center'>".
-								"<div class='event-wrap animate-box'>".
+	echo 
 									"<h3>". $event->eventName ."<br/>"."</h3>".
 									"<div class='event-col'>".
 										"<i class='icon-clock'></i>".
@@ -75,21 +80,21 @@ foreach($myeve as $event){
 										"<i class='icon-calendar'></i>".
 										 "<span>".$event -> eventdate."</span>".
 									"</div>".
-									"<p>".$event -> eventDescription."</p>".
-								"</div>".
-							"</div>".
-						"</div>".
-					"</div>".
-				"</div>".
-			"</div>".
-		"</div>".
-	"</div>";
-
-
-
+									"<p>".$event -> eventDescription."</p>";
+				
 
 } 
 ?>
+				</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>;-->
+
+
 
 
 

@@ -1,6 +1,6 @@
 <?php
 include'header.php';
-require_once './model/Database.php';
+require_once '../model/Database.php';
 require_once './model/event.php';
 $dbcon = Database::getDb();
 $e = new Event();

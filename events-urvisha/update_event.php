@@ -8,7 +8,7 @@ if(isset($_POST['update'])){
     $dbcon = Database::getDb();
     $e = new Event();
     $event = $e->getEventsById($id, $dbcon);
-    var_dump($event);
+    //var_dump($event);
 
 }
 
@@ -46,7 +46,7 @@ if(isset($_POST['updeve']))
 </div>
 <form action="" method="post">
 
-	<!--<input type="hidden" name="urvisha" value="<?= $event-> eventId;?>" /> -->
+
 
 	<label>Name: </label>
 	<input type="text" name="name" value="<?= $event->eventName; ?>"/> <br/>
