@@ -1,8 +1,8 @@
 <?php
 
-require_once'./model/database.php';
-require_once'./model/newsletter.php';
-include'header.php';
+//include'../headerfooter/header.php';
+require_once '../model/Database.php'; // get the database
+require_once 'newsletter.php';
 	
 	$db = Database::getDb();
 	$n = new Newsletter();
@@ -36,3 +36,8 @@ include'header.php';
         }
     }?>
 </div>
+
+<?php
+include'../headerfooter/footer.php';
+
+?>

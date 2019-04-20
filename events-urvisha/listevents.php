@@ -1,6 +1,7 @@
 <?php
-require_once "./model/database.php";
-require_once "./model/event.php";
+include'../headerfooter/header.php';
+require_once '../model/Database.php'; // get the database
+require_once 'event.php';
 
 	$db = Database::getDb();
 	$e = new Event();
@@ -33,3 +34,7 @@ require_once "./model/event.php";
         }
     }?>
 </div>
+
+<?php
+include'../headerfooter/footer.php';
+?>

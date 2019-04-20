@@ -1,8 +1,10 @@
 <?php
 
-require_once './model/Database.php';
-require_once './model/newsletter.php';
-include'header.php';
+
+
+include'../headerfooter/header.php';
+require_once '../model/Database.php'; // get the database
+require_once 'newsletter.php';
 	$dbcon = Database::getDb();
 	$n = new newsletter();
 	$nwsltr =  $n->getAllNewsletter($dbcon);

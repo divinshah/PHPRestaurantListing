@@ -1,8 +1,14 @@
 <?php
 
+<<<<<<< HEAD
 require_once '../headerfooter/header.php';
 require_once './model/Database.php';
 require_once './model/event.php';
+=======
+include'../headerfooter/header.php';
+require_once '../model/Database.php'; // get the database
+require_once 'event.php';
+>>>>>>> 42a8da7ba53e0705add2e5d7d455609016fb459d
 
 
 	
@@ -30,6 +36,10 @@ require_once './model/event.php';
 	
 }
  require_once '../headerfooter/footer.php';
+?>
+
+<?php
+include'../headerfooter/footer.php';
 ?>
  <!--
  

@@ -1,7 +1,7 @@
 <?php
-require_once './model/Database.php';
-require_once './model/event.php';
-include 'header.php';
+include'../headerfooter/header.php';
+require_once '../model/Database.php'; // get the database
+require_once 'event.php';
 if(isset($_POST['update'])){
     $id = $_POST['id'];
 
@@ -69,3 +69,7 @@ if(isset($_POST['updeve']))
 	
 	<input type="submit" name="updeve" value="update Event" />
 </form>
+
+<?php
+include'../headerfooter/footer.php';
+?>
