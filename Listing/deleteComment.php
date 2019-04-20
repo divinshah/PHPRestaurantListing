@@ -1,9 +1,19 @@
+<?php require_once '../headerfooter/adminhome.php'  ?>
 <!DOCTYPE html>
 <html>
+<style>
+.boxDel{
+    padding-left: 90px;
+}
+
+
+</style>
 <body>
 
-<h2>Delete Comments</h2>
 
+<div class="row">
+<div class="container boxDel">
+<h2>Delete Comments</h2>
 <table border=1 cellpadding=1 cellspacing=1>
     <tr>
         <th>Business title</th>
@@ -41,6 +51,9 @@
 
 ?>
 </table>
+</div>
+</div>
 
 </body>
 </html>
+<?php require_once '../headerfooter/adminfooter.html'  ?>

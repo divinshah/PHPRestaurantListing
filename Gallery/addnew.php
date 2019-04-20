@@ -1,4 +1,5 @@
 <?php
+require_once '../headerfooter/adminhome.php';
 error_reporting( ~E_NOTICE ); // avoid notice
 require_once 'dbconfig.php';
     if(isset($_POST['btnsave']))
@@ -123,3 +124,4 @@ require_once 'dbconfig.php';
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 </body>
 </html>
+<?php require_once '../headerfooter/adminfooter.html'  ?>

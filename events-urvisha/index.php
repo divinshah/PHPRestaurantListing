@@ -1,6 +1,6 @@
 <?php
 
-include'header.php';
+require_once '../headerfooter/header.php';
 require_once './model/Database.php';
 require_once './model/event.php';
 
@@ -29,6 +29,7 @@ require_once './model/event.php';
 
 	
 }
+ require_once '../headerfooter/footer.php';
 ?>
  <!--
  

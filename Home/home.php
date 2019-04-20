@@ -1,4 +1,4 @@
-<?php include 'header.php'; ?>
+<?php include '../headerfooter/header.php'; ?>
 
 <section id="intro" class="clearfix">
     <div class="container">
@@ -189,4 +189,4 @@
     </section><!-- #contact -->
 
   </main>
-  <?php include 'footer.php'; ?>
+  <?php include '../headerfooter/footer.php'; ?>
