@@ -3,6 +3,14 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<?php
+include "../headerfooter/adminhome.php";
+?> 
+<div class="jumbotron">
+    <div class="container">
+        <h1>Contact Us</h1>
+    </div>
+</div>
 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
         <thead>
             <tr>
@@ -13,7 +21,7 @@
         </thead>
         <tbody>
 <?php
-require_once 'Database.php';
+require_once '../model/Database.php';
 require_once 'Contact.php';
 
 
@@ -32,3 +40,6 @@ echo  "<tr>
 ?>
 </tbody>
 </table>
+<?php
+include "../headerfooter/adminfooter.html";
+?>
