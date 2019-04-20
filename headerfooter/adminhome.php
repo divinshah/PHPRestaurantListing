@@ -125,19 +125,19 @@ $db = Database::getDb();
           </a>
         </li>
           <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
-          <a class="nav-link" href="../">
+          <a class="nav-link" href="../Listing/listings.php">
             <i class="fa fa-fw fa-link"></i>
             <span class="nav-link-text">Business</span>
           </a>
         </li>
           <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
-          <a class="nav-link" href="../">
+          <a class="nav-link" href="../Gallery/displayimages.php">
             <i class="fa fa-fw fa-link"></i>
             <span class="nav-link-text">Gallery</span>
           </a>
         </li>
           <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
-          <a class="nav-link" href="../">
+          <a class="nav-link" href="../Listing/getListing.php">
             <i class="fa fa-fw fa-link"></i>
             <span class="nav-link-text">Comments</span>
           </a>
