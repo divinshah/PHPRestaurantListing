@@ -21,13 +21,14 @@ if(isset($_POST['updgiftcard'])){
 	//var_dump($_POST);
 	//echo "hi";
     $id= $_POST['fid'];
-	$Name1 = $_POST['Name1'];
-	$Name2 = $_POST['Name2'];
-    $Email = $_POST['Email'];
-    $Message = $_POST['Message'];
+	$amount = $_POST['amount'];
+	$email = $_POST['email'];
+	$giftto = $_POST['giftto'];
+    $giftfrom = $_POST['giftfrom'];
+    $message = $_POST['message'];
     $dbcon = Database::getDb();
     $s = new giftcard();
-    $count = $s->updategiftcard($id, $Name1, $Name2, $Email, $Message, $dbcon);
+    $count = $s->updategiftcard($id, $amount, $email, $giftto, $giftfrom, $message, $dbcon);
     if($count){
         header("Location: listgift.php");
     } else {
@@ -38,10 +39,11 @@ if(isset($_POST['updgiftcard'])){
 <div class="container">
 <form action="" method="post">
     <input type="hidden" class="form-control" name="fid" value="<?= $giftcards->id; ?>" />
-	 Name1: <input type="text" class="form-control" name="Name1" value="<?= $giftcards->Name1; ?>" /><br/>
-	  Name2: <input type="text" class="form-control" name="Name2" value="<?= $giftcards->Name2; ?>" /><br/>
-    Email: <input type="text" class="form-control" name="Email" value="<?= $giftcards->Email; ?>" /><br/>
-    Message: <input type="text" class="form-control" name="Message" value="<?= $giftcards->Message; ?>" /><br />
+	 AMOUNT: <input type="text" class="form-control" name="amount" value="<?= $giftcards->amount; ?>" /><br/>
+	 EMAIL: <input type="text" class="form-control" name="email" value="<?= $giftcards->email; ?>" /><br/>
+	  GIFT TO: <input type="text" class="form-control" name="giftto" value="<?= $giftcards->giftto; ?>" /><br/>
+    GIFT FROM: <input type="text" class="form-control" name="giftfrom" value="<?= $giftcards->giftfrom; ?>" /><br/>
+    MESSAGE: <input type="text" class="form-control" name="message" value="<?= $giftcards->message; ?>" /><br />
     <input type="submit"  class="form-control" name="updgiftcard" value="Update giftcards">
 </form>
 </div>

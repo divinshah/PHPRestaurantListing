@@ -9,7 +9,16 @@ class blog
         $results = $pdostm->fetchAll(PDO::FETCH_OBJ);
         return $results;
     }
+	public function getAllBlogs($dbcon){
 
+
+        $sql = "SELECT * FROM blogs";
+        $pdostm = $dbcon->prepare($sql);
+        $pdostm->execute();
+
+        $offers = $pdostm->fetchAll(PDO::FETCH_OBJ);
+        return $offers;
+    }
     public function getBlogById($Id, $db){
         $sql = "SELECT * FROM blogs where id = :Id";
         $pst = $db->prepare($sql);
@@ -21,17 +30,18 @@ class blog
         $sql = "SELECT * FROM blogs";
         $pdostm = $dbcon->prepare($sql);
         $pdostm->execute();
-        $Email = $pdostm->fetchAll(PDO::FETCH_OBJ);
-        return $Email;
+        $Id = $pdostm->fetchAll(PDO::FETCH_OBJ);
+        return $Id;
     }
-    public function addblog($Name, $Password, $Blogg $db)
+    public function addblog($name, $date, $time, $blog, $db)
     {
-        $sql = "INSERT INTO blogs (Name, Password, Blogg) 
-              VALUES (:Name, :Password, :Blogg) ";
+        $sql = "INSERT INTO blogs (Name, date, time, blog) 
+              VALUES (:name, :date, :time, :blog) ";
         $pst = $db->prepare($sql);
-		$pst->bindParam(':Name', $Name);
-		$pst->bindParam(':Password', $Password);
-        $pst->bindParam(':Blogg', $Blogg);
+		$pst->bindParam(':name', $name);
+		$pst->bindParam(':date', $date);
+		$pst->bindParam(':time', $time);
+		$pst->bindParam(':blog', $blog);
         
         $count = $pst->execute();
         return $count;
@@ -43,17 +53,19 @@ class blog
         $count = $pst->execute();
         return $count;
     }
-    public function updateblog($Id, $Name, $Password, $Blogg, $db)
+    public function updateblog($Id, $name, $date, $time, $blog, $db)
 	{
         $sql = "Update blogs
-                set Name = :Name,
-				Password = :Password,
-				Blogg = :Blogg
+                set name = :name,
+				date = :date,
+				time = :time,
+				blog = :blog
                 WHERE id = :id";
         $pst =  $db->prepare($sql);
-		$pst->bindParam(':Name', $Name);
-		$pst->bindParam(':Password', $Password);
-        $pst->bindParam(':Blogg', $Blogg);
+		$pst->bindParam(':name', $name);
+		$pst->bindParam(':date', $date);
+		$pst->bindParam(':time', $time);
+        $pst->bindParam(':blog', $blog);
         $pst->bindParam(':id', $Id);
         $count = $pst->execute();
         return $count;

@@ -8,5 +8,5 @@ if(isset($_GET['id'])){
     $f = $s->getEmailById($ID, $dbcon);
 //var_dump($feedback);
 }
-echo  "Email : " . $f->Email . "<br />";
-echo  "Message : " . $f->Message . "<br />";
+echo  "Email : " . $f->email . "<br />";
+echo  "Message : " . $f->message . "<br />";

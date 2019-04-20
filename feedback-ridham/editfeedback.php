@@ -13,7 +13,7 @@ if(isset($_POST['update'])){
 	$dbcon = Database::getDb();
     $s = new feedback();
 	//echo "hi";
-    $feedbacks = $s->getEmailById($id, $dbcon);
+    $feedback = $s->getEmailById($id, $dbcon);
     //var_dump($faq);
 	
 }
@@ -34,9 +34,9 @@ if(isset($_POST['updfeedback'])){
 ?>
 <div class="container">
 <form action="" method="post">
-    <input type="hidden" class="form-control" name="fid" value="<?= $feedbacks->id; ?>" />
-    Email: <input type="text" class="form-control" name="Email" value="<?= $feedbacks->Email; ?>" /><br/>
-    Message: <input type="text" class="form-control" name="Message" value="<?= $feedbacks->Message; ?>" /><br />
+    <input type="hidden" class="form-control" name="fid" value="<?= $feedback->id; ?>" />
+    Email: <input type="text" class="form-control" name="Email" value="<?= $feedback->email; ?>" /><br/>
+    Message: <input type="text" class="form-control" name="Message" value="<?= $feedback->message; ?>" /><br />
     <input type="submit"  class="form-control" name="updfeedback" value="Update Feedback">
 </form>
 </div>

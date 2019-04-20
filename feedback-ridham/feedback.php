@@ -24,7 +24,9 @@ class feedback
         $pst->execute();
         return $pst->fetch(PDO::FETCH_OBJ);
     }
-    public function getFEEDBACK($dbcon){
+    public function getFEEDBACK($dbcon)
+	{
+		//echo "Hi";
         $sql = "SELECT * FROM feedback";
         $pdostm = $dbcon->prepare($sql);
         $pdostm->execute();

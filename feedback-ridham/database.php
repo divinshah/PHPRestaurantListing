@@ -6,8 +6,8 @@ class database
     //properties
     private static $user = 'root';
     private static $pass = '';
-    private static $db = 'feedbck';
-    private static $dsn = 'mysql:host=localhost;dbname=feedbck';
+    private static $db = 'listingdb';
+    private static $dsn = 'mysql:host=localhost;dbname=listingdb';
     private static $dbcon;
 
     private function __construct()

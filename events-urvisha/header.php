@@ -9,7 +9,7 @@
 		<link rel="stylesheet" href="css/animate.css">
 		<link rel="stylesheet" href="css/bootstrap.css">
 		<link rel="stylesheet" href="css/magnific-popup.css">
-		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/style1.css">
 		<script src="js/modernizr-2.6.2.min.js"></script>
 		
 		

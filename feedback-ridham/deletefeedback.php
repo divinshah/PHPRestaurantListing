@@ -1,4 +1,4 @@
-++----+<?php
+<?php
 require_once 'database.php';
 require_once 'Feedback.php';
 if(isset($_POST['delete'])){
