@@ -1,8 +1,10 @@
 <?php
 
-	require_once './model/Database.php';
-	require_once './model/newsletter.php';
-	include'header.php';
+
+
+include'../headerfooter/header.php';
+require_once '../model/Database.php'; // get the database
+require_once 'newsletter.php';
 	
 
 	 if(isset($_POST['adnwsltr'])){
@@ -28,6 +30,12 @@
 
 ?>
 
+<div class="jumbotron">
+<div class="container">
+  <h1>Add newsletter</h1> 
+ </div>
+</div> 
+
 <form action="" method="post">
 	<div>
 	<label>News Topic </label>
@@ -49,5 +57,6 @@
 </form>
 
 <?php
-	include'footer.php';
+	include'../headerfooter/footer.php';
+
 ?>

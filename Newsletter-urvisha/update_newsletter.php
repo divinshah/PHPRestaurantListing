@@ -1,8 +1,8 @@
 <?php
 
-	require_once'./model/database.php';
-	require_once './model/newsletter.php';
-	include'header.php';
+include'../headerfooter/header.php';
+require_once '../model/Database.php'; // get the database
+require_once 'newsletter.php';
 	
 	if(isset($_POST['update'])){
 		
@@ -35,7 +35,11 @@
 
 ?>
 
-
+<div class="jumbotron">
+	<div>
+		<h2>Update newsletter</h2>
+	</div>
+</div>
 
 <form action="" method="post">
 

@@ -1,9 +1,8 @@
 <?php
 //include 'header.php';
+include'../headerfooter/header.php';
 require_once '../model/Database.php'; // get the database
-require_once 'event.php';  // get main event function
-require_once 'file_util.php';  // get file list function
-require_once 'image_util.php';  // process image function
+require_once 'event.php';
 	//validations
 	
 	$nameerr = "";
@@ -198,5 +197,5 @@ require_once 'image_util.php';  // process image function
 </form>
 
 <?php
-	include 'footer.php';
+	include'../headerfooter/footer.php';
 ?>

@@ -1,5 +1,6 @@
 <?php
-require_once '../model/Database.php';
+include'../headerfooter/header.php';
+require_once '../model/Database.php'; // get the database
 require_once 'event.php';
 
 if(isset($_POST['delete'])){

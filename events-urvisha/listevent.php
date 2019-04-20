@@ -1,7 +1,7 @@
 <?php
 include'header.php';
-require_once '../model/Database.php';
-require_once './model/event.php';
+require_once '../model/Database.php'; // get the database
+require_once 'event.php';
 $dbcon = Database::getDb();
 $e = new Event();
 $myeve =  $e->getAllEvents($dbcon);

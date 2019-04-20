@@ -1,9 +1,8 @@
 <?php
 
-include'header.php';
-require_once './model/Database.php';
-require_once './model/event.php';
-
+include'../headerfooter/header.php';
+require_once '../model/Database.php'; // get the database
+require_once 'event.php';
 
 if(isset($_GET['id'])){
     $id = $_GET['id'];
@@ -48,3 +47,8 @@ echo  "fee : " . $event->eventFee . "<br />"; */
 	
 	<!--<input type="submit" name="updeve" value="update Event" />-->
 </form>
+
+<?php
+  include'../headerfooter/footer.php';
+
+?>

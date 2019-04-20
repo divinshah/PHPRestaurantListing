@@ -1,5 +1,7 @@
 <?php
-require_once'database.php';
+include'../headerfooter/header.php';
+require_once '../model/Database.php'; // get the database
+
 
 class Newsletter
 {
