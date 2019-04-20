@@ -1,6 +1,6 @@
 <?php
-require_once './model/Database.php';
-require_once './model/event.php';
+require_once '../model/Database.php';
+require_once 'event.php';
 
 if(isset($_POST['delete'])){
     $id= $_POST['id'];

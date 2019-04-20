@@ -1,7 +1,7 @@
 <?php
 //include 'header.php';
-require_once './model/Database.php'; // get the database
-require_once './model/event.php';  // get main event function
+require_once '../model/Database.php'; // get the database
+require_once 'event.php';  // get main event function
 require_once 'file_util.php';  // get file list function
 require_once 'image_util.php';  // process image function
 	//validations
@@ -121,10 +121,10 @@ require_once 'image_util.php';  // process image function
 
 <form action="" method="post">
 
-	<label>upload image:</label>
+	<!-- <label>upload image:</label>
 	<input type="hidden" name="action" value="upload"/></br>
 	<input type="file" name="file1"/></br>
-	<input id="upload_button" type="submit" value="Upload"/></br>
+	<input id="upload_button" type="submit" value="Upload"/></br> -->
 
 	<label>Name: </label>
 	<input type="text" name="name" value="<?= $name;  ?>" /> 
