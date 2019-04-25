@@ -4,8 +4,8 @@ error_reporting( ~E_NOTICE ); // avoid notice
 require_once 'dbconfig.php';
     if(isset($_POST['btnsave']))
     {
-        $imageName = $_POST['image_name'];// boxer name
-        $image_category = $_POST['category'];// boxer weight
+        $imageName = $_POST['image_name'];
+        $image_category = $_POST['category'];
 
         $imgFile = $_FILES['bimage']['name'];
         $tmp_dir = $_FILES['bimage']['tmp_name'];

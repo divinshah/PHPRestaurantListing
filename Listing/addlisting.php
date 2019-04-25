@@ -121,7 +121,7 @@ $name = $city = $category = $contact = $email = "";
                   <a class="btn" href="viewlistings.php">Back</a>
                 </div>
                               </div>
-                          </form>
+              </form>
                       </div>
                   </div>
               </div>   

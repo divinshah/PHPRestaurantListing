@@ -17,7 +17,7 @@ class Listing
         $newListing = $pdostm->fetchAll(PDO::FETCH_OBJ);
         return $newListing;
     }	
-	 public function addListing($listingname, $listingcity, $listingcategory, $listingcontact, $listingemail, $db)
+	public function addListing($listingname, $listingcity, $listingcategory, $listingcontact, $listingemail, $db)
     {
         $sql = "INSERT INTO businesses (listing_name, listing_city, listing_category, listing_contact, listing_email) 
               VALUES (:listingname, :listingcity, :listingcategory, :listingcontact, :listingemail) ";
