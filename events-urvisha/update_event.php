@@ -1,7 +1,9 @@
 <?php
-include'../headerfooter/header.php';
+
+
 require_once '../model/Database.php'; // get the database
 require_once 'event.php';
+
 if(isset($_POST['update'])){
     $id = $_POST['id'];
 
@@ -14,7 +16,7 @@ if(isset($_POST['update'])){
 
 if(isset($_POST['updeve']))
 {
-    $id= $_POST['urvisha'];
+    $id= $_POST['id'];
     $name = $_POST['name'];
     $description = $_POST['description'];
 	$location = $_POST['location'];
@@ -39,6 +41,9 @@ if(isset($_POST['updeve']))
 
 ?>
 
+<?php
+require_once '../headerfooter/header.php';
+?>
 <div class="jumbotron">
     <div class="container">
         <h1>Update</h1>
@@ -47,7 +52,7 @@ if(isset($_POST['updeve']))
 <form action="" method="post">
 
 
-
+<input type="text" name="id" value="<?= $event->eventId; ?>" hidden/> <br/>
 	<label>Name: </label>
 	<input type="text" name="name" value="<?= $event->eventName; ?>"/> <br/>
 	

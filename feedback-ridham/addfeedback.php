@@ -39,7 +39,6 @@ textarea {
 
 
 <?php	
-require_once '../headerfooter/header.php';
 require_once 'database.php';
 require_once 'feedback.php';
 
@@ -87,46 +86,50 @@ if(isset($_POST['Addfeedback']))
 	$count = $s->addfeedback($Email, $Message, $db);
 	
 	if($count){
-		echo "Feedback Added Successfully";
+		header("location: listfeedback.php");
 	}
 	else {
 		echo "Problem adding feedback";
 	}
 }
 ?>
-
-<div class="jumbotron">
+<?php
+require_once '../headerfooter/header.php';
+?>
+<div class= "jumbotron">
     <div class="container">
         <h1>Your Feedback Please!</h1>
     </div>
 </div>
 
 <div class="container">
-<form method="post">
+<form action="" method="post">
   <h2>Tell us what you think</h2>
       <div class="form-groups">
       <label>Email:</label>
-      <input type="email" class="form-control" name="Addemail" placeholder="Enter email">
-    <?php
-if(isset($Emailerr)) {
-echo $Emailerr;
-}
-?>
-</span>
-</br>
+      <input type="email" class="form-control" name="Addemail" placeholder="Enter email"/>
+		<span>
+		<?php
+		if(isset($Emailerr)) {
+		echo $Emailerr;
+		}
+		?>
+		</span>
+		</br>
 	</div>
     <div class="form-group">
       <label>Your Feedback </label>
       <textarea type="text" class="form-control" name="Addmessage" placeholder="Enter your feeback upto 500 words" required ></textarea>
-<?php
-if(isset($Messageerr)) {
-echo $Messageerr;
-}
-?>
-</span>
-</br>   
+	  <span>
+		<?php
+		if(isset($Messageerr)) {
+		echo $Messageerr;
+		}
+		?>
+		</span>
+		</br>   
    </div>
-    <button type="submit"  name="Addfeedback" class="form-control">Submit</button>
+    <input type="submit"  name="Addfeedback" class="form-control" value="Add Feedback"/>
   </form>
   </div>
  <?php

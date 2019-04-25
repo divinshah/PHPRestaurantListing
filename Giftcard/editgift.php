@@ -4,6 +4,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <?php
+require_once '../headerfooter/header.php';
 require_once 'giftdatabase.php';
 require_once 'giftcard.php';
 	
@@ -47,3 +48,6 @@ if(isset($_POST['updgiftcard'])){
     <input type="submit"  class="form-control" name="updgiftcard" value="Update giftcards">
 </form>
 </div>
+<?php
+include "../headerfooter/footer.php";
+?>
