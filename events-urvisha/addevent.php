@@ -243,10 +243,12 @@ require_once 'event.php';
 	</span>-->
 	</br>
 	</div>
-	
-	<input type="submit" name="addevent" class="form-control"/>
+
+	<input type="submit" name="addevent" class="form-control"/> 
 </form>
 </div>
+
+<script src="script.js"></script>
 <?php
 	include'../headerfooter/footer.php';
 ?>

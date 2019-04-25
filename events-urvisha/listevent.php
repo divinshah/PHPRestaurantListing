@@ -45,6 +45,7 @@ $myeve =  $e->getAllEvents($dbcon);
 </div>
 
 <?php
+
 foreach($myeve as $event){
     echo "<li><a href='eventdetail.php?id=$event->eventId'>" .  $event->eventName  . "</a>".
 		"<div class='container'>".
@@ -60,11 +61,11 @@ foreach($myeve as $event){
         "</li>";
 }
 
-	echo"<div class='container'>".
+	  echo"<div class='container'>".
 		"<form action='addevent.php'>"."</br>".
 		"<input type='submit' class='form-control' value='add event' name='add event'>"."</br>".
 		"</form>".
 		"</div>";
-
+	
 ?>
 

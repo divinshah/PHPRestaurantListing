@@ -1,7 +1,9 @@
 <?php
-include'../headerfooter/header.php';
+
+require_once '../headerfooter/header.php';
 require_once '../model/Database.php'; // get the database
 require_once 'event.php';
+
 if(isset($_POST['update'])){
     $id = $_POST['id'];
 
@@ -26,7 +28,8 @@ if(isset($_POST['updeve']))
 	$dbcon = Database::getDb();
     $e = new Event();
 	$count = $e -> updateEvent($id,$name,$description,$location,$date,$time,$fee,$dbcon);
-    if($count){
+   
+   if($count){
         header("Location: listevent.php");
     } else {
         echo  "problem updating";
