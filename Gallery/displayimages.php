@@ -3,7 +3,7 @@
   <h1>Gallery</h1> 
     </div>
 </div>
-<?php include "header.php"; ?>
+<?php include "../headerfooter/header.php"; ?>
 <div class= "container">
     <div class="row">
 <?php
@@ -36,5 +36,5 @@
 <a class="btn btn-primary" href="addnew.php"> Add new </a>
 </div>
 
-<?php include "footer.php"; ?>
+<?php include "../headerfooter/footer.php"; ?>
 

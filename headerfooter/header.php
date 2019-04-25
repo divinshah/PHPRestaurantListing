@@ -60,44 +60,47 @@
 
   <header id="header" class="fixed-top">
     <div class="container">
-
-      <div class="logo float-left">
-        <h1 class="text-light" text style="color:#fff" ><a href="#header"><!--<span>TO</span>--></a></h1>
-      </div>
+<!--
+      <div class="float-left">
+        <h1 class="text-light" text style="color:#fff" ><a href="#header">TO</a></h1>
+      </div> -->
 
       <nav class="navbar navbar-expand-sm navbar-dark fixed-top navbar-custom">
-        <!--<a class="navbar-brand" href="#">TO</a>-->
+        <a class="navbar-brand" href="#"><h2>TO</h2></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
           <ul class="navbar-nav ml-auto align-items-center">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Home</a>
+          <li class="nav-item">
+              <a class="nav-link" href="../home/home.php">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Explore</a>
+              <a class="nav-link" href="../listing/viewlistings.php">Explore</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About</a>                
+              <a class="nav-link" href="../listing/viewlistings.php">About</a>                
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Blogs</a>
+              <a class="nav-link" href="../Blog/userblog.php">Blogs</a>
             </li>  
             <li class="nav-item">
-              <a class="nav-link" href="#">Event</a>
+              <a class="nav-link" href="../events-urvisha/index.php">Event</a>
             </li> 
             <li class="nav-item">
-              <a class="nav-link" href="#">Offers</a>
+              <a class="nav-link" href="../Gallery/displayimages.php">Gallery</a>
             </li> 
             <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
+              <a class="nav-link" href="../offers/useroffer.php">Offers</a>
+            </li> 
+            <li class="nav-item">
+              <a class="nav-link" href="../contact/InsertContact.php">Contact</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="user-login.php">Login</a>
+              <a class="nav-link" href="../User-Panel/user-login.php">Login</a>
             </li> 
             <li class="nav-item">
-              <a class="nav-link" href="listingform.html"><button type="button" class="btn btn-outline-light">+Add Listing</button></a>
+              <a class="nav-link" href="../listing/addlisting.php"><button type="button" class="btn btn-outline-light">+Add Listing</button></a>
             </li> 
           </ul>
         </div>  

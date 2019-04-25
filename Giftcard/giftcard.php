@@ -33,7 +33,7 @@ class giftcard
     }
     public function addgiftcard($amount, $email, $giftto, $giftfrom, $message, $db)
     {
-        $sql = "INSERT INTO giftcard (amount, email, giftto, giftfrom, message) 
+        $sql = "INSERT INTO giftcards (amount, email, giftto, giftfrom, message) 
               VALUES (:amount, :email, :giftto, :giftfrom, :message) ";
         $pst = $db->prepare($sql);
 		$pst->bindParam(':amount', $amount);

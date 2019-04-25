@@ -1,4 +1,5 @@
 <?php
+require_once '../headerfooter/header.php';
 require_once '../model/Database.php';
 require_once 'Contact.php';
 
@@ -20,7 +21,11 @@ if(isset($_POST['SendMessage']))
 	}
 }
 ?>
-
+<div class="jumbotron">
+<div class="containerH">
+  <h1>Contact</h1> 
+    </div>
+</div>
 <div class="container">
 <form action="" method="post">
 <div class="form-group">
@@ -33,3 +38,4 @@ if(isset($_POST['SendMessage']))
 	<input type="submit" class="form-control" name="SendMessage" value="Send Message" /></div>
 </form>
 </div>
+<?php require_once '../headerfooter/footer.php'; ?>

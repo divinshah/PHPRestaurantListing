@@ -1,4 +1,5 @@
 <?php
+require_once '../headerfooter/adminhome.php';
 require_once 'dbconfig.php';
 // Get images form the database
 $queryImages = "SELECT id, name, category, image FROM gallery ORDER BY id DESC";
@@ -55,3 +56,4 @@ $statement1->closeCursor();
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 </body>
 </html>
+<?php require_once '../headerfooter/adminfooter.html'  ?>

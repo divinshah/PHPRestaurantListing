@@ -88,5 +88,5 @@ foreach($myfaq as $faq){
 }
 ?>
 <?php
-include "../headerfooter/footer.php";
+require_once "../headerfooter/footer.php";
 ?>
