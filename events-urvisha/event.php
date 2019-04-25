@@ -108,7 +108,7 @@ class Event
         
         $pst->bindParam(':id',$id);
         $count = $pst->execute();
-        echo $count;
+        //echo $count;
         return $count;
     }
 
