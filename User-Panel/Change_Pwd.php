@@ -14,6 +14,7 @@ if(isset($_GET['id']))
     
     $u = new User();
     $user = $u->getUserById($id,$dbcon);
+    $thankyou = "";
     $_SESSION['email'];
 }
 
@@ -32,6 +33,7 @@ if(isset($_POST['savepwd']))
         else
         {
             $pass = $u -> updatePwd($newpwd,$id,$db);
+            $thankyou = "Your password change successfully";
         }
         
     }
@@ -68,6 +70,9 @@ require_once '../headerfooter/user_header.php';
         </div>
         <div class="form-group">
             <button type="submit" name="savepwd" class="btn btn-primary">Save Password</button>
+        </div>
+        <div class="form-group">
+            <strong><label><?= $thankyou; ?></label></strong>
         </div>
     </form>
 </div>

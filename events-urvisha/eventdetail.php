@@ -44,8 +44,6 @@ echo  "fee : " . $event->eventFee . "<br />"; */
 	
 	<label>Fees: </label>
 	<?= $event->eventFee; ?><br/>
-	
-	<!--<input type="submit" name="updeve" value="update Event" />-->
 </form>
 
 <?php
