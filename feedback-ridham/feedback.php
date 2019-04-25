@@ -18,7 +18,7 @@ class feedback
         return $s;
     }
     public function getEmailById($Id, $db){
-        $sql = "SELECT * FROM feedback where Id = :Id";
+		$sql = "SELECT * FROM feedback where id = :Id";
         $pst = $db->prepare($sql);
         $pst->bindParam(':Id', $Id);
         $pst->execute();
