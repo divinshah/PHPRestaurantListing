@@ -33,12 +33,12 @@ require 'inc/header.php';
 ?>
 <div class="jumbotron">
 <div class="containerH">
-  <h1>Listing</h1> 
+  <h1>Edit Restaurant</h1> 
     </div>
 </div>
 <div class="container">
     <div class="row">
-        <h3>Update business</h3>
+        <h3>Update Restaurant</h3>
     </div>  
     
     <div class="row">

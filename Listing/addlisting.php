@@ -53,12 +53,12 @@ $name = $city = $category = $contact = $email = "";
 ?>
 <div class="jumbotron">
 <div class="containerH">
-  <h1>Listing</h1> 
+  <h1>Add Restaurant</h1> 
     </div>
 </div>
 <div class="container">
     <div class="row">
-        <h3>Add listing</h3>
+        <h3>Add your Restaurant</h3>
     </div>  
     
     <div class="row">
@@ -67,7 +67,7 @@ $name = $city = $category = $contact = $email = "";
             
               <div class="form-group">
                   
-                  <label for="listingname">Listing Name:</label>
+                  <label for="listingname">Restaurant Name*</label>
                   <input type="text" class="form-control" name="listingname" required>
                   <div class="valid-feedback">Valid.</div>
                   <div class="invalid-feedback">Please fill out this field.</div>
@@ -76,7 +76,7 @@ $name = $city = $category = $contact = $email = "";
 
                 <div class="form-group">
                   
-                  <label for="listingcity">Listing City:</label>
+                  <label for="listingcity">Restaurant City*</label>
                   <input type="text" class="form-control" name="listingcity" required>
                   <div class="valid-feedback">Valid.</div>
                   <div class="invalid-feedback">Please fill out this field.</div>
@@ -84,7 +84,7 @@ $name = $city = $category = $contact = $email = "";
                 </div>
 
                 <div class="form-group">
-                  <label for="listingcategory">Category</label>
+                  <label for="listingcategory">Category*</label>
                   <select name="listingcategory" class="form-control" required>
                       <option value="Mexican">Mexican</option>
                       <option value="Italian">Italian</option>
@@ -100,7 +100,7 @@ $name = $city = $category = $contact = $email = "";
 
                 <div class="form-group">
                   
-                  <label for="listingcontact">Contact:</label>
+                  <label for="listingcontact">Contact*</label>
                   <input type="text" class="form-control" name="listingcontact" required>
                   <div class="valid-feedback">Valid.</div>
                   <div class="invalid-feedback">Please fill out this field.</div>
@@ -109,23 +109,24 @@ $name = $city = $category = $contact = $email = "";
 
                 <div class="form-group">
                   
-                  <label for="listingemail">Email:</label>
+                  <label for="listingemail">Email*</label>
                   <input type="email" class="form-control" name="listingemail" required>
                   <div class="valid-feedback">Valid.</div>
                   <div class="invalid-feedback">Please fill out this field.</div>
                   <span class="error"><?php $email_error ?> </span>
                 </div>
+                <p>* All fields are required</p>
                 <div class="form-group">
                   <div class="col-sm-offset-2 col-sm-10">
                   <button type="submit" name="addList" class="btn btn-primary">Create</button>
                   <a class="btn" href="viewlistings.php">Back</a>
                 </div>
-                              </div>
+                
+              </div>
               </form>
                       </div>
                   </div>
               </div>   
 
 
-
-<?php require 'inc/footer.php'; ?>
+<?php require '../headerfooter/footer.php'; ?>

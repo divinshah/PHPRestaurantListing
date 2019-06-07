@@ -45,7 +45,7 @@ class Listing
 
         return $count;
     }
-	 public function deleteListing($id, $db){
+	public function deleteListing($id, $db){
         $sql = "DELETE FROM businesses WHERE ID = ?";
         $pst = $db->prepare($sql);
         $pst->execute(array($id));
